@@ -3,4 +3,3 @@ venv/
 creds/
 **creds.json
 entsoe-venv/
-*/*.ipynb
