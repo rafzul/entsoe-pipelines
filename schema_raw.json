@@ -1,0 +1,292 @@
+{
+  "fields": [
+    {
+      "metadata": {},
+      "name": "GL_MarketDocument",
+      "nullable": true,
+      "type": {
+        "fields": [
+          {
+            "metadata": {},
+            "name": "@xmlns",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "metadata": {},
+            "name": "TimeSeries",
+            "nullable": true,
+            "type": {
+              "containsNull": true,
+              "elementType": {
+                "fields": [
+                  {
+                    "metadata": {},
+                    "name": "MktPSRType",
+                    "nullable": true,
+                    "type": {
+                      "fields": [
+                        {
+                          "metadata": {},
+                          "name": "psrType",
+                          "nullable": true,
+                          "type": "string"
+                        }
+                      ],
+                      "type": "struct"
+                    }
+                  },
+                  {
+                    "metadata": {},
+                    "name": "Period",
+                    "nullable": true,
+                    "type": {
+                      "fields": [
+                        {
+                          "metadata": {},
+                          "name": "Point",
+                          "nullable": true,
+                          "type": {
+                            "containsNull": true,
+                            "elementType": {
+                              "fields": [
+                                {
+                                  "metadata": {},
+                                  "name": "position",
+                                  "nullable": true,
+                                  "type": "string"
+                                },
+                                {
+                                  "metadata": {},
+                                  "name": "quantity",
+                                  "nullable": true,
+                                  "type": "string"
+                                }
+                              ],
+                              "type": "struct"
+                            },
+                            "type": "array"
+                          }
+                        },
+                        {
+                          "metadata": {},
+                          "name": "resolution",
+                          "nullable": true,
+                          "type": "string"
+                        },
+                        {
+                          "metadata": {},
+                          "name": "timeInterval",
+                          "nullable": true,
+                          "type": {
+                            "fields": [
+                              {
+                                "metadata": {},
+                                "name": "end",
+                                "nullable": true,
+                                "type": "string"
+                              },
+                              {
+                                "metadata": {},
+                                "name": "start",
+                                "nullable": true,
+                                "type": "string"
+                              }
+                            ],
+                            "type": "struct"
+                          }
+                        }
+                      ],
+                      "type": "struct"
+                    }
+                  },
+                  {
+                    "metadata": {},
+                    "name": "businessType",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "curveType",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "inBiddingZone_Domain.mRID",
+                    "nullable": true,
+                    "type": {
+                      "fields": [
+                        {
+                          "metadata": {},
+                          "name": "#text",
+                          "nullable": true,
+                          "type": "string"
+                        },
+                        {
+                          "metadata": {},
+                          "name": "@codingScheme",
+                          "nullable": true,
+                          "type": "string"
+                        }
+                      ],
+                      "type": "struct"
+                    }
+                  },
+                  {
+                    "metadata": {},
+                    "name": "mRID",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "objectAggregation",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "outBiddingZone_Domain.mRID",
+                    "nullable": true,
+                    "type": {
+                      "fields": [
+                        {
+                          "metadata": {},
+                          "name": "#text",
+                          "nullable": true,
+                          "type": "string"
+                        },
+                        {
+                          "metadata": {},
+                          "name": "@codingScheme",
+                          "nullable": true,
+                          "type": "string"
+                        }
+                      ],
+                      "type": "struct"
+                    }
+                  },
+                  {
+                    "metadata": {},
+                    "name": "quantity_Measure_Unit.name",
+                    "nullable": true,
+                    "type": "string"
+                  }
+                ],
+                "type": "struct"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "metadata": {},
+            "name": "createdDateTime",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "metadata": {},
+            "name": "mRID",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "metadata": {},
+            "name": "process.processType",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "metadata": {},
+            "name": "receiver_MarketParticipant.mRID",
+            "nullable": true,
+            "type": {
+              "fields": [
+                {
+                  "metadata": {},
+                  "name": "#text",
+                  "nullable": true,
+                  "type": "string"
+                },
+                {
+                  "metadata": {},
+                  "name": "@codingScheme",
+                  "nullable": true,
+                  "type": "string"
+                }
+              ],
+              "type": "struct"
+            }
+          },
+          {
+            "metadata": {},
+            "name": "receiver_MarketParticipant.marketRole.type",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "metadata": {},
+            "name": "revisionNumber",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "metadata": {},
+            "name": "sender_MarketParticipant.mRID",
+            "nullable": true,
+            "type": {
+              "fields": [
+                {
+                  "metadata": {},
+                  "name": "#text",
+                  "nullable": true,
+                  "type": "string"
+                },
+                {
+                  "metadata": {},
+                  "name": "@codingScheme",
+                  "nullable": true,
+                  "type": "string"
+                }
+              ],
+              "type": "struct"
+            }
+          },
+          {
+            "metadata": {},
+            "name": "sender_MarketParticipant.marketRole.type",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "metadata": {},
+            "name": "time_Period.timeInterval",
+            "nullable": true,
+            "type": {
+              "fields": [
+                {
+                  "metadata": {},
+                  "name": "end",
+                  "nullable": true,
+                  "type": "string"
+                },
+                {
+                  "metadata": {},
+                  "name": "start",
+                  "nullable": true,
+                  "type": "string"
+                }
+              ],
+              "type": "struct"
+            }
+          },
+          { "metadata": {}, "name": "type", "nullable": true, "type": "string" }
+        ],
+        "type": "struct"
+      }
+    }
+  ],
+  "type": "struct"
+}

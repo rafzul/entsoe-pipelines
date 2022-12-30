@@ -1,1430 +1,689 @@
 {
     "GL_MarketDocument": {
-      "@xmlns": "urn:iec62325.351:tc57wg16:451-6:generationloaddocument:3:0",
-      "mRID": "f8a36d3d3d634ce6bbb3f9ccd53a8ff5",
-      "revisionNumber": "1",
-      "type": "A73",
-      "process.processType": "A16",
-      "sender_MarketParticipant.mRID": {
-        "@codingScheme": "A01",
-        "#text": "10X1001A1001A450"
-      },
-      "sender_MarketParticipant.marketRole.type": "A32",
-      "receiver_MarketParticipant.mRID": {
-        "@codingScheme": "A01",
-        "#text": "10X1001A1001A450"
-      },
-      "receiver_MarketParticipant.marketRole.type": "A33",
-      "createdDateTime": "2022-12-27T06:39:56Z",
-      "time_Period.timeInterval": {
-        "start": "2021-01-01T11:00Z",
-        "end": "2021-01-01T12:00Z"
-      },
-      "TimeSeries": [
-        {
-          "mRID": "1",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
+        "@xmlns": "urn:iec62325.351:tc57wg16:451-6:generationloaddocument:3:0",
+        "mRID": "6365220cffee43dcb764b12872099296",
+        "revisionNumber": "1",
+        "type": "A75",
+        "process.processType": "A16",
+        "sender_MarketParticipant.mRID": {
             "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-ECHV----Y"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-ECHVG1--C"
-              },
-              "name": "ECHV_G1____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "155"
-            }
-          }
+            "#text": "10X1001A1001A450"
         },
-        {
-          "mRID": "2",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
+        "sender_MarketParticipant.marketRole.type": "A32",
+        "receiver_MarketParticipant.mRID": {
             "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-ECHV----Y"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-ECHVG2--8"
-              },
-              "name": "ECHV_G2____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "156"
-            }
-          }
+            "#text": "10X1001A1001A450"
         },
-        {
-          "mRID": "3",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-ECHV----Y"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-ECHVG3--4"
-              },
-              "name": "ECHV_G3____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
+        "receiver_MarketParticipant.marketRole.type": "A33",
+        "createdDateTime": "2022-12-29T10:53:26Z",
+        "time_Period.timeInterval": {
+            "start": "2021-01-01T11:00Z",
+            "end": "2021-01-01T12:00Z"
         },
-        {
-          "mRID": "4",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-ECHV----Y"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-ECHVG4--0"
-              },
-              "name": "ECHV_G4____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+        "TimeSeries": [
+            {
+                "mRID": "1",
+                "businessType": "A01",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B01"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "2219"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "2215"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "2222"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "2223"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "5",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EDAL----O"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B10",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EDALG1--2"
-              },
-              "name": "EDAL_G1____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "2",
+                "businessType": "A01",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B02"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "20"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "20"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "20"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "20"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "6",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EDAL----O"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B10",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EDALG2--Z"
-              },
-              "name": "EDAL_G2____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "3",
+                "businessType": "A01",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B04"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "2001"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "2001"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "2001"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "2001"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "7",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EDAL----O"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B10",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EDALG3--V"
-              },
-              "name": "EDAL_G3____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "4",
+                "businessType": "A01",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B05"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "543"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "543"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "543"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "542"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "8",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EDAL----O"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B10",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EDALG4--R"
-              },
-              "name": "EDAL_G4____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "5",
+                "businessType": "A01",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B06"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "0"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "0"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "0"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "0"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "9",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EDET----M"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B05",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EDETG2--X"
-              },
-              "name": "EDET_G2____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "6",
+                "businessType": "A01",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B09"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "24"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "24"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "24"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "24"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "10",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EDET----M"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B05",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EDETG3--T"
-              },
-              "name": "EDET_G3____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "7",
+                "businessType": "A01",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B10"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "48"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "83"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "84"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "83"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "11",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EDET----M"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B05",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EDETG4--P"
-              },
-              "name": "EDET_G4____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "8",
+                "businessType": "A01",
+                "objectAggregation": "A08",
+                "outBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B10"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "93"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "0"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "0"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "0"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "12",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EDST----Z"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B10",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EDSTG1--D"
-              },
-              "name": "EDST_G1____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "9",
+                "businessType": "A01",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B11"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "481"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "480"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "481"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "481"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "13",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EDST----Z"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B10",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EDSTG2--9"
-              },
-              "name": "EDST_G2____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "10",
+                "businessType": "A01",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B12"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "15"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "13"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "14"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "16"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "14",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EDUK----1"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B14",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EDUKB1--4"
-              },
-              "name": "EDUK_B1____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "11",
+                "businessType": "A01",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B14"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "4170"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "4171"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "4171"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "4172"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "15",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EDUK----1"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B14",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EDUKB2--0"
-              },
-              "name": "EDUK_B2____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "12",
+                "businessType": "A01",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B20"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "20"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "20"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "20"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "20"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "463"
-            }
-          }
-        },
-        {
-          "mRID": "16",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EDUK----1"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B14",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EDUKB3--X"
-              },
-              "name": "EDUK_B3____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "13",
+                "businessType": "A01",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B15"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "10"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "10"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "10"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "10"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "465"
-            }
-          }
-        },
-        {
-          "mRID": "17",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EDUK----1"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B14",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EDUKB4--T"
-              },
-              "name": "EDUK_B4____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "14",
+                "businessType": "A94",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B16"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "2337"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "2403"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "2386"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "2363"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "473"
-            }
-          }
-        },
-        {
-          "mRID": "18",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EECK----8"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EECKG4--B"
-              },
-              "name": "EECK_G4____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "15",
+                "businessType": "A01",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B17"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "322"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "322"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "322"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "322"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "98"
-            }
-          }
-        },
-        {
-          "mRID": "19",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EECK----8"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EECKG5--7"
-              },
-              "name": "EECK_G5____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
+            {
+                "mRID": "16",
+                "businessType": "A93",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B18"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "488"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "524"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "586"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "623"
+                        }
+                    ]
+                }
             },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "100"
+            {
+                "mRID": "17",
+                "businessType": "A93",
+                "objectAggregation": "A08",
+                "inBiddingZone_Domain.mRID": {
+                    "@codingScheme": "A01",
+                    "#text": "10YDE-EON------1"
+                },
+                "quantity_Measure_Unit.name": "MAW",
+                "curveType": "A01",
+                "MktPSRType": {
+                    "psrType": "B19"
+                },
+                "Period": {
+                    "timeInterval": {
+                        "start": "2021-01-01T11:00Z",
+                        "end": "2021-01-01T12:00Z"
+                    },
+                    "resolution": "PT15M",
+                    "Point": [
+                        {
+                            "position": "1",
+                            "quantity": "586"
+                        },
+                        {
+                            "position": "2",
+                            "quantity": "580"
+                        },
+                        {
+                            "position": "3",
+                            "quantity": "577"
+                        },
+                        {
+                            "position": "4",
+                            "quantity": "562"
+                        }
+                    ]
+                }
             }
-          }
-        },
-        {
-          "mRID": "20",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EECK----8"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27WGU-EECKG7---A"
-              },
-              "name": "EECK_G7____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "69"
-            }
-          }
-        },
-        {
-          "mRID": "21",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-ELED----H"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-ELEDG6--C"
-              },
-              "name": "ELED_G6____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "557"
-            }
-          }
-        },
-        {
-          "mRID": "22",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EPC1----Y"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EPC1G2--8"
-              },
-              "name": "EPC1_G2____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "161"
-            }
-          }
-        },
-        {
-          "mRID": "23",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EPC1----Y"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EPC1G3--4"
-              },
-              "name": "EPC1_G3____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "24",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EPC1----Y"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EPC1G4--0"
-              },
-              "name": "EPC1_G4____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "166"
-            }
-          }
-        },
-        {
-          "mRID": "25",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EPC1----Y"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EPC1G5--X"
-              },
-              "name": "EPC1_G5____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "26",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EPC1----Y"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EPC1G6--T"
-              },
-              "name": "EPC1_G6____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "27",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EPC2----S"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B04",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EPC2B21-L"
-              },
-              "name": "EPC2_B21___"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "0"
-            }
-          }
-        },
-        {
-          "mRID": "28",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EPR2----Y"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EPR2G23-X"
-              },
-              "name": "EPR2_G23___"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "220"
-            }
-          }
-        },
-        {
-          "mRID": "29",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EPR2----Y"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EPR2G24-U"
-              },
-              "name": "EPR2_G24___"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "189"
-            }
-          }
-        },
-        {
-          "mRID": "30",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EPR2----Y"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EPR2G25-R"
-              },
-              "name": "EPR2_G25___"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "215"
-            }
-          }
-        },
-        {
-          "mRID": "31",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EPVR----4"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B04",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EPVR-B1-L"
-              },
-              "name": "EPVR.B1"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "124"
-            }
-          }
-        },
-        {
-          "mRID": "32",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-EPVR----4"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B04",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-EPVR-B2-I"
-              },
-              "name": "EPVR.B2"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "124"
-            }
-          }
-        },
-        {
-          "mRID": "33",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-ETEM----A"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B14",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-ETEMG1--P"
-              },
-              "name": "ETEM_G1____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "1035"
-            }
-          }
-        },
-        {
-          "mRID": "34",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-ETEM----A"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B14",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-ETEMG2--L"
-              },
-              "name": "ETEM_G2____"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "1047"
-            }
-          }
-        },
-        {
-          "mRID": "35",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-ETI2----S"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-ETI2-G6-A"
-              },
-              "name": "ETI2.G6"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "69"
-            }
-          }
-        },
-        {
-          "mRID": "36",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-ETU2----I"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-ETU2G21-N"
-              },
-              "name": "ETU2_G21___"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "167"
-            }
-          }
-        },
-        {
-          "mRID": "37",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-ETU2----I"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-ETU2G22-K"
-              },
-              "name": "ETU2_G22___"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "167"
-            }
-          }
-        },
-        {
-          "mRID": "38",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-ETU2----I"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-ETU2G23-H"
-              },
-              "name": "ETU2_G23___"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "176"
-            }
-          }
-        },
-        {
-          "mRID": "39",
-          "businessType": "A01",
-          "objectAggregation": "A06",
-          "inBiddingZone_Domain.mRID": {
-            "@codingScheme": "A01",
-            "#text": "10YCZ-CEPS-----N"
-          },
-          "registeredResource.mRID": {
-            "@codingScheme": "A01",
-            "#text": "27W-PU-ETU2----I"
-          },
-          "quantity_Measure_Unit.name": "MAW",
-          "curveType": "A01",
-          "MktPSRType": {
-            "psrType": "B02",
-            "PowerSystemResources": {
-              "mRID": {
-                "@codingScheme": "A01",
-                "#text": "27W-GU-ETU2G24-E"
-              },
-              "name": "ETU2_G24___"
-            }
-          },
-          "Period": {
-            "timeInterval": {
-              "start": "2021-01-01T11:00Z",
-              "end": "2021-01-01T12:00Z"
-            },
-            "resolution": "PT60M",
-            "Point": {
-              "position": "1",
-              "quantity": "176"
-            }
-          }
-        }
-      ]
+        ]
     }
-  }
+}
