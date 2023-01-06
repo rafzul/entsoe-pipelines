@@ -22,7 +22,7 @@
             "metadata": {},
             "name": "revisionNumber",
             "nullable": true,
-            "type": "integer"
+            "type": "string"
           },
           {
             "metadata": {},
@@ -32,13 +32,13 @@
           },
           {
             "metadata": {},
-            "name": "process_processType",
+            "name": "process.processType",
             "nullable": true,
             "type": "string"
           },
           {
             "metadata": {},
-            "name": "sender_MarketParticipant_mRID",
+            "name": "sender_MarketParticipant.mRID",
             "nullable": true,
             "type": {
               "fields": [
@@ -60,13 +60,13 @@
           },
           {
             "metadata": {},
-            "name": "sender_MarketParticipant_marketRole_type",
+            "name": "sender_MarketParticipant.marketRole.type",
             "nullable": true,
             "type": "string"
           },
           {
             "metadata": {},
-            "name": "receiver_MarketParticipant_mRID",
+            "name": "receiver_MarketParticipant.mRID",
             "nullable": true,
             "type": {
               "fields": [
@@ -88,7 +88,7 @@
           },
           {
             "metadata": {},
-            "name": "receiver_MarketParticipant_marketRole_type",
+            "name": "receiver_MarketParticipant.marketRole.type",
             "nullable": true,
             "type": "string"
           },
@@ -100,7 +100,7 @@
           },
           {
             "metadata": {},
-            "name": "time_Period_timeInterval",
+            "name": "time_Period.timeInterval",
             "nullable": true,
             "type": {
               "fields": [
@@ -130,80 +130,6 @@
                 "fields": [
                   {
                     "metadata": {},
-                    "name": "mRID",
-                    "nullable": true,
-                    "type": "integer"
-                  },
-                  {
-                    "metadata": {},
-                    "name": "businessType",
-                    "nullable": true,
-                    "type": "string"
-                  },
-                  {
-                    "metadata": {},
-                    "name": "objectAggregation",
-                    "nullable": true,
-                    "type": "string"
-                  },
-                  {
-                    "metadata": {},
-                    "name": "inBiddingZone_Domain_mRID",
-                    "nullable": true,
-                    "type": {
-                      "fields": [
-                        {
-                          "metadata": {},
-                          "name": "#text",
-                          "nullable": true,
-                          "type": "string"
-                        },
-                        {
-                          "metadata": {},
-                          "name": "@codingScheme",
-                          "nullable": true,
-                          "type": "string"
-                        }
-                      ],
-                      "type": "struct"
-                    }
-                  },
-                  {
-                    "metadata": {},
-                    "name": "outBiddingZone_Domain_mRID",
-                    "nullable": true,
-                    "type": {
-                      "fields": [
-                        {
-                          "metadata": {},
-                          "name": "#text",
-                          "nullable": true,
-                          "type": "string"
-                        },
-                        {
-                          "metadata": {},
-                          "name": "@codingScheme",
-                          "nullable": true,
-                          "type": "string"
-                        }
-                      ],
-                      "type": "struct"
-                    }
-                  },
-                  {
-                    "metadata": {},
-                    "name": "quantity_Measure_Unit_name",
-                    "nullable": true,
-                    "type": "string"
-                  },
-                  {
-                    "metadata": {},
-                    "name": "curveType",
-                    "nullable": true,
-                    "type": "string"
-                  }
-                  {
-                    "metadata": {},
                     "name": "MktPSRType",
                     "nullable": true,
                     "type": {
@@ -226,6 +152,38 @@
                       "fields": [
                         {
                           "metadata": {},
+                          "name": "Point",
+                          "nullable": true,
+                          "type": {
+                            "containsNull": true,
+                            "elementType": {
+                              "fields": [
+                                {
+                                  "metadata": {},
+                                  "name": "position",
+                                  "nullable": true,
+                                  "type": "string"
+                                },
+                                {
+                                  "metadata": {},
+                                  "name": "quantity",
+                                  "nullable": true,
+                                  "type": "string"
+                                }
+                              ],
+                              "type": "struct"
+                            },
+                            "type": "array"
+                          }
+                        },
+                        {
+                          "metadata": {},
+                          "name": "resolution",
+                          "nullable": true,
+                          "type": "string"
+                        },
+                        {
+                          "metadata": {},
                           "name": "timeInterval",
                           "nullable": true,
                           "type": {
@@ -245,42 +203,84 @@
                             ],
                             "type": "struct"
                           }
-                        },
+                        }
+                      ],
+                      "type": "struct"
+                    }
+                  },
+                  {
+                    "metadata": {},
+                    "name": "businessType",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "curveType",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "inBiddingZone_Domain.mRID",
+                    "nullable": true,
+                    "type": {
+                      "fields": [
                         {
                           "metadata": {},
-                          "name": "resolution",
+                          "name": "#text",
                           "nullable": true,
                           "type": "string"
                         },
                         {
                           "metadata": {},
-                          "name": "Point",
+                          "name": "@codingScheme",
                           "nullable": true,
-                          "type": {
-                            "containsNull": true,
-                            "elementType": {
-                              "fields": [
-                                {
-                                  "metadata": {},
-                                  "name": "position",
-                                  "nullable": true,
-                                  "type": "integer"
-                                },
-                                {
-                                  "metadata": {},
-                                  "name": "quantity",
-                                  "nullable": true,
-                                  "type": "float"
-                                }
-                              ],
-                              "type": "struct"
-                            },
-                            "type": "array"
-                          }
+                          "type": "string"
                         }
                       ],
                       "type": "struct"
                     }
+                  },
+                  {
+                    "metadata": {},
+                    "name": "mRID",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "objectAggregation",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "outBiddingZone_Domain.mRID",
+                    "nullable": true,
+                    "type": {
+                      "fields": [
+                        {
+                          "metadata": {},
+                          "name": "#text",
+                          "nullable": true,
+                          "type": "string"
+                        },
+                        {
+                          "metadata": {},
+                          "name": "@codingScheme",
+                          "nullable": true,
+                          "type": "string"
+                        }
+                      ],
+                      "type": "struct"
+                    }
+                  },
+                  {
+                    "metadata": {},
+                    "name": "quantity_Measure_Unit.name",
+                    "nullable": true,
+                    "type": "string"
                   }
                 ],
                 "type": "struct"
