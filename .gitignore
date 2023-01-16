@@ -1,5 +1,6 @@
-.env
+*.env
 venv/
 creds/
 **creds.json
 entsoe-venv/
+
