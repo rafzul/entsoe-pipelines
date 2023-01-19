@@ -6,7 +6,7 @@ import pandas as pd
 from dotenv import load_dotenv, find_dotenv
 from google.oauth2 import service_account
 from google.cloud import storage
-
+d
 # import GCS Hook (airflow only)
 from airflow.providers.google.cloud.hooks.gcs import GCSHook
 
@@ -24,7 +24,6 @@ load_dotenv("/opt/airflow/.env", verbose=True)
 
 # setting up entsoe variables
 security_token = os.environ.get("ENTSOE_SECURITY_TOKEN")
-print(security_token)
 
 # setting up GCP variables
 gcs_bucket = os.environ.get("GCP_GCS_BUCKET")
@@ -88,7 +87,7 @@ def extract_raw_data(metrics_label, start, end, timezone, country_code, **params
         entsoe_json_data = _extract_generation(entsoe_client, start, end, country_code)
 
     start_label = start.strftime("%Y%m%d%H%M")
-    end_label = end.strftime("%Y%m%d%H%M%S")
+    end_label = end.strftime("%Y%m%d%H%M")
     landing_filename = (
         f"{metrics_label}__{country_code}__{start_label}__{end_label}.json"
     )

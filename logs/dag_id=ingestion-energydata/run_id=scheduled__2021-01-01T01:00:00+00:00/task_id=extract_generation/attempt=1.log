@@ -1,0 +1,100 @@
+[2023-01-17T16:50:13.371+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.extract_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-17T16:50:13.409+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.extract_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-17T16:50:13.409+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-17T16:50:13.410+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 4
+[2023-01-17T16:50:13.411+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-17T16:50:13.458+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_generation> on 2021-01-01 01:00:00+00:00
+[2023-01-17T16:50:13.505+0000] {standard_task_runner.py:55} INFO - Started process 1388 to run task
+[2023-01-17T16:50:13.542+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ingestion-energydata', 'extract_generation', 'scheduled__2021-01-01T01:00:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmpi54iq362']
+[2023-01-17T16:50:13.561+0000] {standard_task_runner.py:83} INFO - Job 19: Subtask extract_generation
+[2023-01-17T16:50:15.012+0000] {task_command.py:389} INFO - Running <TaskInstance: ingestion-energydata.extract_generation scheduled__2021-01-01T01:00:00+00:00 [running]> on host 60e8e9877e7a
+[2023-01-17T16:50:15.710+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=ingestion-energydata
+AIRFLOW_CTX_TASK_ID=extract_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T01:00:00+00:00
+[2023-01-17T16:50:17.618+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-01-17T16:50:17.619+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-01-17T16:50:18.004+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-17T16:50:18.042+0000] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=ingestion-energydata, task_id=extract_generation, execution_date=20210101T010000, start_date=20230117T165013, end_date=20230117T165018
+[2023-01-17T16:50:18.125+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-17T16:50:18.201+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-01-17T19:02:43.382+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.extract_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-17T19:02:43.455+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.extract_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-17T19:02:43.455+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-17T19:02:43.455+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 4
+[2023-01-17T19:02:43.455+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-17T19:02:43.549+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_generation> on 2021-01-01 01:00:00+00:00
+[2023-01-17T19:02:43.581+0000] {standard_task_runner.py:55} INFO - Started process 9568 to run task
+[2023-01-17T19:02:43.603+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ingestion-energydata', 'extract_generation', 'scheduled__2021-01-01T01:00:00+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmpbozrpdfw']
+[2023-01-17T19:02:43.616+0000] {standard_task_runner.py:83} INFO - Job 33: Subtask extract_generation
+[2023-01-17T19:02:43.855+0000] {task_command.py:389} INFO - Running <TaskInstance: ingestion-energydata.extract_generation scheduled__2021-01-01T01:00:00+00:00 [running]> on host 60e8e9877e7a
+[2023-01-17T19:02:44.053+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=ingestion-energydata
+AIRFLOW_CTX_TASK_ID=extract_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T01:00:00+00:00
+[2023-01-17T19:02:45.573+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-01-17T19:02:45.573+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-01-17T19:02:45.920+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-17T19:02:45.937+0000] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=ingestion-energydata, task_id=extract_generation, execution_date=20210101T010000, start_date=20230117T190243, end_date=20230117T190245
+[2023-01-17T19:02:45.998+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-17T19:02:46.034+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-01-18T00:29:59.001+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.extract_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-18T00:29:59.015+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.extract_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-18T00:29:59.015+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T00:29:59.016+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 4
+[2023-01-18T00:29:59.016+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T00:29:59.034+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_generation> on 2021-01-01 01:00:00+00:00
+[2023-01-18T00:29:59.048+0000] {standard_task_runner.py:55} INFO - Started process 10135 to run task
+[2023-01-18T00:29:59.055+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ingestion-energydata', 'extract_generation', 'scheduled__2021-01-01T01:00:00+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmp8xfesgpa']
+[2023-01-18T00:29:59.058+0000] {standard_task_runner.py:83} INFO - Job 39: Subtask extract_generation
+[2023-01-18T00:29:59.174+0000] {task_command.py:389} INFO - Running <TaskInstance: ingestion-energydata.extract_generation scheduled__2021-01-01T01:00:00+00:00 [running]> on host 60e8e9877e7a
+[2023-01-18T00:29:59.277+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=ingestion-energydata
+AIRFLOW_CTX_TASK_ID=extract_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T01:00:00+00:00
+[2023-01-18T00:30:01.203+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-01-18T00:30:01.203+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-01-18T00:30:01.538+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-18T00:30:01.551+0000] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=ingestion-energydata, task_id=extract_generation, execution_date=20210101T010000, start_date=20230118T002959, end_date=20230118T003001
+[2023-01-18T00:30:01.599+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-18T00:30:01.621+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-01-18T00:34:00.852+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.extract_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-18T00:34:00.863+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.extract_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-18T00:34:00.863+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T00:34:00.863+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 4
+[2023-01-18T00:34:00.863+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T00:34:00.874+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_generation> on 2021-01-01 01:00:00+00:00
+[2023-01-18T00:34:00.882+0000] {standard_task_runner.py:55} INFO - Started process 10399 to run task
+[2023-01-18T00:34:00.886+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ingestion-energydata', 'extract_generation', 'scheduled__2021-01-01T01:00:00+00:00', '--job-id', '41', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmpquz0pqpo']
+[2023-01-18T00:34:00.889+0000] {standard_task_runner.py:83} INFO - Job 41: Subtask extract_generation
+[2023-01-18T00:34:00.957+0000] {task_command.py:389} INFO - Running <TaskInstance: ingestion-energydata.extract_generation scheduled__2021-01-01T01:00:00+00:00 [running]> on host 60e8e9877e7a
+[2023-01-18T00:34:01.027+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=ingestion-energydata
+AIRFLOW_CTX_TASK_ID=extract_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T01:00:00+00:00
+[2023-01-18T00:34:02.507+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-01-18T00:34:02.508+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-01-18T00:34:02.825+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-18T00:34:02.833+0000] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=ingestion-energydata, task_id=extract_generation, execution_date=20210101T010000, start_date=20230118T003400, end_date=20230118T003402
+[2023-01-18T00:34:02.870+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-18T00:34:02.887+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
