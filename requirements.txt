@@ -5,6 +5,10 @@ sqlalchemy
 psycopg2-binary
 beautifulsoup4
 apache-airflow-providers-google
+apache-airflow-providers-apache-spark
+apache-airflow-providers-dbt-cloud
+apache-airflow-providers-github
+airflow.providers.cncf.kubernetes
 google
 google-auth
 google-cloud

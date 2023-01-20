@@ -1,0 +1,672 @@
+[2023-01-19T16:19:14.261+0000] {processor.py:153} INFO - Started process (PID=44) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:19:14.262+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:19:14.264+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:19:14.263+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:19:14.306+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:19:14.303+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:19:14.308+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:19:14.342+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.087 seconds
+[2023-01-19T16:19:44.574+0000] {processor.py:153} INFO - Started process (PID=73) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:19:44.576+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:19:44.579+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:19:44.579+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:19:44.602+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:19:44.598+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:19:44.604+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:19:44.656+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.090 seconds
+[2023-01-19T16:20:14.830+0000] {processor.py:153} INFO - Started process (PID=102) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:20:14.832+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:20:14.833+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:20:14.832+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:20:14.844+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:20:14.843+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:20:14.845+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:20:14.875+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.050 seconds
+[2023-01-19T16:20:45.183+0000] {processor.py:153} INFO - Started process (PID=117) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:20:45.184+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:20:45.185+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:20:45.185+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:20:45.204+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:20:45.201+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:20:45.207+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:20:45.244+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.067 seconds
+[2023-01-19T16:21:15.432+0000] {processor.py:153} INFO - Started process (PID=146) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:21:15.434+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:21:15.435+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:21:15.435+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:21:15.446+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:21:15.444+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:21:15.447+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:21:15.476+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.049 seconds
+[2023-01-19T16:21:45.723+0000] {processor.py:153} INFO - Started process (PID=175) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:21:45.725+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:21:45.727+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:21:45.726+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:21:45.749+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:21:45.745+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:21:45.750+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:21:45.787+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.071 seconds
+[2023-01-19T16:22:15.977+0000] {processor.py:153} INFO - Started process (PID=204) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:22:15.978+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:22:15.979+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:22:15.979+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:22:15.997+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:22:15.994+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:22:15.998+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:22:16.038+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.068 seconds
+[2023-01-19T16:22:46.252+0000] {processor.py:153} INFO - Started process (PID=233) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:22:46.255+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:22:46.258+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:22:46.257+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:22:46.300+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:22:46.292+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:22:46.304+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:22:46.391+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.151 seconds
+[2023-01-19T16:23:16.540+0000] {processor.py:153} INFO - Started process (PID=262) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:23:16.543+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:23:16.545+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:23:16.545+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:23:16.577+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:23:16.573+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:23:16.580+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:23:16.649+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.120 seconds
+[2023-01-19T16:23:46.894+0000] {processor.py:153} INFO - Started process (PID=290) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:23:46.903+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:23:46.904+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:23:46.904+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:23:46.914+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:23:46.913+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:23:46.915+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:23:46.937+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.049 seconds
+[2023-01-19T16:24:17.130+0000] {processor.py:153} INFO - Started process (PID=333) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:24:17.139+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:24:17.140+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:24:17.140+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:24:17.146+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:24:17.145+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:24:17.147+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:24:17.163+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.036 seconds
+[2023-01-19T16:24:47.372+0000] {processor.py:153} INFO - Started process (PID=362) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:24:47.381+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:24:47.382+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:24:47.382+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:24:47.390+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:24:47.389+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:24:47.391+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:24:47.410+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.041 seconds
+[2023-01-19T16:25:17.612+0000] {processor.py:153} INFO - Started process (PID=392) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:25:17.613+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:25:17.614+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:25:17.614+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:25:17.629+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:25:17.626+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:25:17.630+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:25:17.659+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.052 seconds
+[2023-01-19T16:25:47.825+0000] {processor.py:153} INFO - Started process (PID=421) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:25:47.826+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:25:47.827+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:25:47.827+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:25:47.842+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:25:47.840+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:25:47.844+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:25:47.867+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.057 seconds
+[2023-01-19T16:26:18.020+0000] {processor.py:153} INFO - Started process (PID=457) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:26:18.021+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:26:18.022+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:26:18.022+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:26:18.034+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:26:18.032+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:26:18.035+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:26:18.069+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.055 seconds
+[2023-01-19T16:26:48.258+0000] {processor.py:153} INFO - Started process (PID=494) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:26:48.268+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:26:48.269+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:26:48.268+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:26:48.280+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:26:48.278+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:26:48.281+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:26:48.303+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.049 seconds
+[2023-01-19T16:27:18.517+0000] {processor.py:153} INFO - Started process (PID=523) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:27:18.526+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:27:18.526+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:27:18.526+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:27:18.534+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:27:18.533+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:27:18.535+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:27:18.552+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.039 seconds
+[2023-01-19T16:27:48.737+0000] {processor.py:153} INFO - Started process (PID=552) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:27:48.745+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:27:48.746+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:27:48.746+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:27:48.753+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:27:48.752+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:27:48.754+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:27:48.769+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.035 seconds
+[2023-01-19T16:28:18.968+0000] {processor.py:153} INFO - Started process (PID=595) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:28:18.977+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:28:18.978+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:28:18.977+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:28:18.986+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:28:18.985+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:28:18.987+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:28:19.006+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.042 seconds
+[2023-01-19T16:28:49.190+0000] {processor.py:153} INFO - Started process (PID=624) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:28:49.191+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:28:49.191+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:28:49.191+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:28:49.199+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:28:49.198+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:28:49.200+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:28:49.217+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.030 seconds
+[2023-01-19T16:29:19.411+0000] {processor.py:153} INFO - Started process (PID=653) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:29:19.411+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:29:19.412+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:29:19.412+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:29:19.420+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:29:19.419+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:29:19.421+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:29:19.437+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.030 seconds
+[2023-01-19T16:29:49.632+0000] {processor.py:153} INFO - Started process (PID=697) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:29:49.633+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:29:49.633+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:29:49.633+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:29:49.640+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:29:49.639+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:29:49.641+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:29:49.656+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.026 seconds
+[2023-01-19T16:30:19.865+0000] {processor.py:153} INFO - Started process (PID=726) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:30:19.866+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:30:19.867+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:30:19.867+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:30:19.877+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:30:19.876+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:30:19.878+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:30:19.897+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.038 seconds
+[2023-01-19T16:30:50.115+0000] {processor.py:153} INFO - Started process (PID=755) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:30:50.117+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:30:50.118+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:30:50.117+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:30:50.131+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:30:50.128+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:30:50.132+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:30:50.159+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.051 seconds
+[2023-01-19T16:31:20.298+0000] {processor.py:153} INFO - Started process (PID=791) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:31:20.307+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:31:20.308+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:31:20.308+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:31:20.315+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:31:20.314+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:31:20.316+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:31:20.333+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.037 seconds
+[2023-01-19T16:31:50.462+0000] {processor.py:153} INFO - Started process (PID=827) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:31:50.471+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:31:50.472+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:31:50.472+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:31:50.477+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:31:50.476+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:31:50.478+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:31:50.491+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.032 seconds
+[2023-01-19T16:32:20.632+0000] {processor.py:153} INFO - Started process (PID=856) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:32:20.641+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:32:20.642+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:32:20.642+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:32:20.649+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:32:20.648+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:32:20.650+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:32:20.670+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.041 seconds
+[2023-01-19T16:32:50.798+0000] {processor.py:153} INFO - Started process (PID=892) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:32:50.806+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:32:50.806+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:32:50.806+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:32:50.815+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:32:50.814+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:32:50.815+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:32:50.834+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.039 seconds
+[2023-01-19T16:33:20.977+0000] {processor.py:153} INFO - Started process (PID=928) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:33:20.980+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:33:20.981+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:33:20.981+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:33:20.997+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:33:20.995+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:33:20.998+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:33:21.034+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.062 seconds
+[2023-01-19T16:33:51.130+0000] {processor.py:153} INFO - Started process (PID=957) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:33:51.131+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:33:51.132+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:33:51.132+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:33:51.140+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:33:51.139+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:33:51.141+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:33:51.160+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.033 seconds
+[2023-01-19T16:34:21.312+0000] {processor.py:153} INFO - Started process (PID=986) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:34:21.321+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:34:21.321+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:34:21.321+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:34:21.327+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:34:21.326+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:34:21.327+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:34:21.341+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.031 seconds
+[2023-01-19T16:34:51.466+0000] {processor.py:153} INFO - Started process (PID=1029) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:34:51.467+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:34:51.467+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:34:51.467+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:34:51.476+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:34:51.474+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:34:51.476+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:34:51.494+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.031 seconds
+[2023-01-19T16:35:21.634+0000] {processor.py:153} INFO - Started process (PID=1058) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:35:21.635+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:35:21.635+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:35:21.635+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:35:21.641+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:35:21.640+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:35:21.641+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:35:21.655+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.024 seconds
+[2023-01-19T16:35:51.792+0000] {processor.py:153} INFO - Started process (PID=1087) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:35:51.792+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:35:51.793+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:35:51.793+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:35:51.800+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:35:51.799+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:35:51.800+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:35:51.815+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.026 seconds
+[2023-01-19T16:36:21.955+0000] {processor.py:153} INFO - Started process (PID=1130) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:36:21.956+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:36:21.956+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:36:21.956+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:36:21.965+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:36:21.963+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:36:21.966+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:36:21.982+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.030 seconds
+[2023-01-19T16:36:52.129+0000] {processor.py:153} INFO - Started process (PID=1159) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:36:52.130+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:36:52.131+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:36:52.131+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:36:52.138+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:36:52.137+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:36:52.139+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:36:52.158+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.032 seconds
+[2023-01-19T16:37:22.300+0000] {processor.py:153} INFO - Started process (PID=1188) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:37:22.301+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:37:22.301+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:37:22.301+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:37:22.307+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:37:22.306+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:37:22.307+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:37:22.320+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.023 seconds
+[2023-01-19T16:37:52.441+0000] {processor.py:153} INFO - Started process (PID=1231) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:37:52.442+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:37:52.442+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:37:52.442+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:37:52.450+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:37:52.448+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:37:52.450+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:37:52.467+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.029 seconds
+[2023-01-19T16:38:22.619+0000] {processor.py:153} INFO - Started process (PID=1260) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:38:22.620+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:38:22.620+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:38:22.620+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:38:22.627+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:38:22.626+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:38:22.627+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:38:22.644+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.028 seconds
+[2023-01-19T16:38:52.783+0000] {processor.py:153} INFO - Started process (PID=1289) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:38:52.784+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:38:52.784+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:38:52.784+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:38:52.792+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:38:52.791+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:38:52.792+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:38:52.808+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.027 seconds
+[2023-01-19T16:39:22.968+0000] {processor.py:153} INFO - Started process (PID=1332) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:39:22.977+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:39:22.978+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:39:22.978+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:39:22.985+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:39:22.984+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:39:22.986+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:39:23.009+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.043 seconds
+[2023-01-19T16:39:53.145+0000] {processor.py:153} INFO - Started process (PID=1361) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:39:53.146+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-19T16:39:53.146+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:39:53.146+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:39:53.153+0000] {logging_mixin.py:137} INFO - [2023-01-19T16:39:53.152+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 7, in <module>
+    from scripts.extract_raw import extract_raw_data
+  File "/opt/airflow/plugins/scripts/extract_raw.py", line 9, in <module>
+    d
+NameError: name 'd' is not defined
+[2023-01-19T16:39:53.153+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-19T16:39:53.168+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.026 seconds

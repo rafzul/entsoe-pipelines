@@ -89,6 +89,8 @@ x-airflow-common:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
+    - ./spark/resources:${SPARK_HOME}/resources
+    - ./.env:/opt/airflow/.env
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on
@@ -100,10 +102,7 @@ x-airflow-common:
 services:
   #define spark services
   spark:
-    #image: docker.io/bitnami/spark:3.3
-    build: 
-      context: .
-      dockerfile: ./Dockerfile    
+    image: bitnami/spark:3.3.1
     environment:
       - SPARK_MODE=master
       - SPARK_RPC_AUTHENTICATION_ENABLED=no
@@ -111,19 +110,18 @@ services:
       - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
       - SPARK_SSL_ENABLED=no
     ports:
-      - '8181:8080'
+      - '8181:8181'
       - '7077:7077'
     volumes:
       - ./spark/resources:${SPARK_HOME}/resources
+    tty: true
 
   spark-worker-1:
-    build: 
-      context: .  
-      dockerfile: ./Dockerfile    
+    image: bitnami/spark:3.3.1
     environment:
         - SPARK_MODE=worker
         - SPARK_MASTER_URL=spark://spark:7077
-        - SPARK_WORKER_MEMORY=1G
+        - SPARK_WORKER_MEMORY=350M
         - SPARK_WORKER_CORES=1
         - SPARK_RPC_AUTHENTICATION_ENABLED=no
         - SPARK_RPC_ENCRYPTION_ENABLED=no
@@ -131,15 +129,14 @@ services:
         - SPARK_SSL_ENABLED=no
     volumes:
           - ./spark/resources:${SPARK_HOME}/resources #Resources folder (Must be the same path in airflow and Spark Cluster)
+    tty: true
 
   spark-worker-2:
-    build: 
-      context: .  
-      dockerfile: ./Dockerfile    
+    image: bitnami/spark:3.3.1 
     environment:
         - SPARK_MODE=worker
         - SPARK_MASTER_URL=spark://spark:7077
-        - SPARK_WORKER_MEMORY=1G
+        - SPARK_WORKER_MEMORY=350M
         - SPARK_WORKER_CORES=1  
         - SPARK_RPC_AUTHENTICATION_ENABLED=no
         - SPARK_RPC_ENCRYPTION_ENABLED=no
@@ -147,23 +144,8 @@ services:
         - SPARK_SSL_ENABLED=no
     volumes:
           - ./spark/resources:${SPARK_HOME}/resources #Resources folder (Must be the same path in airflow and Spark Cluster)
+    tty: true
     
-  spark-worker-3:
-    build: 
-      context: .  
-      dockerfile: ./Dockerfile    
-    environment:
-        - SPARK_MODE=worker
-        - SPARK_MASTER_URL=spark://spark:7077
-        - SPARK_WORKER_MEMORY=1G
-        - SPARK_WORKER_CORES=1
-        - SPARK_RPC_AUTHENTICATION_ENABLED=no
-        - SPARK_RPC_ENCRYPTION_ENABLED=no
-        - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
-        - SPARK_SSL_ENABLED=no
-    volumes:
-          - ./spark/resources:${SPARK_HOME}/resources #Resources folder (Must be the same path in airflow and Spark Cluster)
-  
   postgres:
     image: postgres:13
     environment:

@@ -4,6 +4,7 @@ import pandas as pd
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.dummy_operator import DummyOperator
+from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 from scripts.extract_raw import extract_raw_data
 
 default_args = {
@@ -16,6 +17,8 @@ default_args = {
     "email_on_retry": False,
 }
 
+start = "{{ data_interval_start.format('YYYYMMDDHHmm') }}"
+end = "{{ data_interval_end.format('YYYYMMDDHHmm') }}"
 tz = "Europe/Berlin"
 country_code = "DE_TENNET"
 
@@ -35,14 +38,19 @@ extract_generation = PythonOperator(
     python_callable=extract_raw_data,
     op_kwargs={
         "metrics_label": "total_generation",
-        "start": "{{ data_interval_start.format('YYYYMMDDHHmm') }}",
-        "end": "{{ data_interval_end.format('YYYYMMDDHHmm') }}",
+        "start": start,
+        "end": end,
         "timezone": tz,
         "country_code": country_code,
     },
 )
 
+transform_stage_generation = SparkSubmitOperator(
+    task_id="transform_stage_generation",
+    dag=dag,
+    application="/opt/airflow/plugins/scripts/transform_stage.py",
+    application_args=["total_generation", start, end, tz, country_code],
+)
 
 
-
-start_operator >> extract_generation
+start_operator >> extract_generation >> transform_stage_generation

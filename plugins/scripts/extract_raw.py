@@ -6,7 +6,8 @@ import pandas as pd
 from dotenv import load_dotenv, find_dotenv
 from google.oauth2 import service_account
 from google.cloud import storage
-d
+
+
 # import GCS Hook (airflow only)
 from airflow.providers.google.cloud.hooks.gcs import GCSHook
 
