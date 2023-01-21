@@ -1,6 +1,6 @@
 # First-time build can take upto 10 mins.
 
-FROM apache/airflow:2.5.0-python3.10
+FROM doc
 ENV AIRFLOW_HOME=/opt/airflow
 
 #define spark version
@@ -15,16 +15,17 @@ RUN apt-get update -qq && \
     apt-get install -y openjdk-11-jdk && \
     apt-get install -y ant && \
     apt-get install -y wget && \
+    apt-get install -y procps && \
     apt-get clean;
 
 
 COPY requirements.txt .
 USER $AIRFLOW_UID
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 USER root
 #Set JAVA_HOME
-ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 RUN export JAVA_HOME
 
 
@@ -34,7 +35,7 @@ RUN export JAVA_HOME
 
 #set spark files and variables
 RUN cd 
-ENV SPARK_HOME "/usr/local/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}-scala${SCALA_VERSION}"
+ENV SPARK_HOME="/usr/local/spark"
 
 #wget spark and extract
 RUN cd "/tmp" && \
@@ -44,12 +45,12 @@ RUN cd "/tmp" && \
 
 #create SPARK_HOME env var
 RUN export SPARK_HOME
-ENV PATH "${SPARK_HOME}/bin:${SPARK_HOME}/sbin:${JAVA_HOME}/bin:${PATH}"
+ENV PATH="${SPARK_HOME}/bin:${SPARK_HOME}/sbin:${JAVA_HOME}/bin:${PATH}"
 
 #setup python path for spark
-ENV PYSPARK_PYTHON "/usr/bin/python3.10"
-ENV PYSPARK_DRIVER_PYTHON "/usr/bin/python3.10"
-ENV PYTHONPATH "${SPARK_HOME}/python/:${SPARK_HOME}/python/lib/py4j-*-src.zip:${PYTHONPATH}"
+ENV PYSPARK_PYTHON="/usr/bin/python3.9"
+ENV PYSPARK_DRIVER_PYTHON="/usr/bin/python3.9"
+ENV PYTHONPATH="${SPARK_HOME}/python/:${SPARK_HOME}/python/lib/py4j-*-src.zip:${PYTHONPATH}"
 RUN export PYSPARK_PYTHON
 RUN export PYSPARK_DRIVER_PYTHON
 RUN export PYTHONPATH
@@ -84,7 +85,9 @@ RUN DOWNLOAD_URL="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/goo
     && rm -rf "${TMP_DIR}" \
     && gcloud --version
 
-RUN chown -R airflow: ${AIRFLOW_HOME}
+# RUN chown -R airflow: ${AIRFLOW_HOME}
+# RUN chown 
+RUN export PATH
 EXPOSE 8181
 
 WORKDIR $AIRFLOW_HOME

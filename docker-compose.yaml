@@ -60,36 +60,34 @@ x-airflow-common:
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
-
-    #-------------------------
-
    #google credentials
     GOOGLE_APPLICATION_CREDENTIALS: "${GOOGLE_APPLICATION_CREDENTIALS}"
     AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: "${AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT}"
     #google shit
     GCP_PROJECT_ID: "${GCP_PROJECT_ID}"
     GCP_GCS_BUCKET: "${GCP_GCS_BUCKET}"
-
     #entsoe credentials
     ENTSOE_SECURITY_TOKEN: "${ENTSOE_SECURITY_TOKEN}"
-
-    
     #setup JAVA
     JAVA_HOME: "${JAVA_HOME}"
-    SPARK_HOME: "${SPARK_HOME}"
-    PYSPARK_PYTHON: "${PYSPARK_PYTHON}"
-    PYSPARK_SUBMIT_ARGS: "${PYSPARK_SUBMIT_ARGS}"
-    PYTHONPATH: "${PYTHONPATH}"
+    #define spark version
+    SPARK_VERSION: "3.3.1"
+    HADOOP_VERSION: "3"
+    SCALA_VERSION: "2.13"
+    SPARK_HOME: "/usr/local/spark"
+    PYSPARK_PYTHON: "/usr/bin/python3.9"
+    PYSPARK_DRIVER_PYTHON: "/usr/bin/python3.9"
+    # PYTHONPATH: "${PYTHONPATH}"
+    # PATH: "${SPARK_HOME}/bin:${SPARK_HOME}/sbin:${JAVA_HOME}/bin:${PATH}"
     # PATH: "${PATH}"
     #-------------------------
-
 
   volumes:
     - ~/.google/credentials/:/.google/credentials:ro
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
-    - ./spark/resources:${SPARK_HOME}/resources
+    - ./spark/resources:/usr/local/spark/resources
     - ./.env:/opt/airflow/.env
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
@@ -113,7 +111,8 @@ services:
       - '8181:8181'
       - '7077:7077'
     volumes:
-      - ./spark/resources:${SPARK_HOME}/resources
+      - ./spark/resources:/usr/local/spark/resources
+      - ./spark/requirements_spark.txt:/opt/requirements_spark.txt
     tty: true
 
   spark-worker-1:
@@ -128,7 +127,8 @@ services:
         - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
         - SPARK_SSL_ENABLED=no
     volumes:
-          - ./spark/resources:${SPARK_HOME}/resources #Resources folder (Must be the same path in airflow and Spark Cluster)
+      - ./spark/resources:/usr/local/spark/resources
+      - ./spark/requirements_spark.txt:/opt/requirements_spark.txt
     tty: true
 
   spark-worker-2:
@@ -143,7 +143,8 @@ services:
         - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
         - SPARK_SSL_ENABLED=no
     volumes:
-          - ./spark/resources:${SPARK_HOME}/resources #Resources folder (Must be the same path in airflow and Spark Cluster)
+      - ./spark/resources:/usr/local/spark/resources
+      - ./spark/requirements_spark.txt:/opt/requirements_spark.txt
     tty: true
     
   postgres:

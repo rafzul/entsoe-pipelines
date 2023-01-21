@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 import pandas as pd
-
+import os
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.dummy_operator import DummyOperator
@@ -48,8 +48,10 @@ extract_generation = PythonOperator(
 transform_stage_generation = SparkSubmitOperator(
     task_id="transform_stage_generation",
     dag=dag,
-    application="/opt/airflow/plugins/scripts/transform_stage.py",
-    application_args=["total_generation", start, end, tz, country_code],
+    conn_id="spark_local",
+    jars="/usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar",
+    application="/opt/airflow/plugins/scripts/transform_raw_staging.py",
+    application_args=["total_generation", start, end, country_code],
 )
 
 
