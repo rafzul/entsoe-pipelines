@@ -361,3 +361,444 @@ airflow.exceptions.AirflowException: Cannot execute: spark-submit --master local
 [2023-01-21T11:46:52.421+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 229 for task transform_stage_generation (Cannot execute: spark-submit --master local --jars /usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.; 2750)
 [2023-01-21T11:46:52.482+0000] {local_task_job.py:159} INFO - Task exited with return code 1
 [2023-01-21T11:46:52.522+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-01-21T16:51:57.634+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-21T16:51:57.646+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-21T16:51:57.646+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T16:51:57.646+0000] {taskinstance.py:1284} INFO - Starting attempt 4 of 4
+[2023-01-21T16:51:57.646+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T16:51:57.660+0000] {taskinstance.py:1304} INFO - Executing <Task(SparkSubmitOperator): transform_stage_generation> on 2021-01-01 01:00:00+00:00
+[2023-01-21T16:51:57.668+0000] {standard_task_runner.py:55} INFO - Started process 65 to run task
+[2023-01-21T16:51:57.672+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ingestion-energydata', 'transform_stage_generation', 'scheduled__2021-01-01T01:00:00+00:00', '--job-id', '242', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmpfv8d531a']
+[2023-01-21T16:51:57.675+0000] {standard_task_runner.py:83} INFO - Job 242: Subtask transform_stage_generation
+[2023-01-21T16:51:57.757+0000] {task_command.py:389} INFO - Running <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [running]> on host 4260804338b2
+[2023-01-21T16:51:57.855+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=ingestion-energydata
+AIRFLOW_CTX_TASK_ID=transform_stage_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T01:00:00+00:00
+[2023-01-21T16:51:57.867+0000] {base.py:73} INFO - Using connection ID 'spark_local' for task execution.
+[2023-01-21T16:51:57.871+0000] {spark_submit.py:344} INFO - Spark-Submit cmd: spark-submit --master local --jars /usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET
+[2023-01-21T16:52:04.666+0000] {spark_submit.py:495} INFO - 23/01/21 16:52:04 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-01-21T16:52:05.462+0000] {spark_submit.py:495} INFO - 23/01/21 16:52:05 WARN DependencyUtils: Local jar /opt/***/ /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar does not exist, skipping.
+[2023-01-21T16:52:05.710+0000] {spark_submit.py:495} INFO - Traceback (most recent call last):
+[2023-01-21T16:52:05.710+0000] {spark_submit.py:495} INFO - File "/opt/***/plugins/scripts/transform_raw_staging.py", line 2, in <module>
+[2023-01-21T16:52:05.710+0000] {spark_submit.py:495} INFO - from dotenv import load_dotenv, find_dotenv
+[2023-01-21T16:52:05.711+0000] {spark_submit.py:495} INFO - ModuleNotFoundError: No module named 'dotenv'
+[2023-01-21T16:52:05.773+0000] {spark_submit.py:495} INFO - 23/01/21 16:52:05 INFO ShutdownHookManager: Shutdown hook called
+[2023-01-21T16:52:05.774+0000] {spark_submit.py:495} INFO - 23/01/21 16:52:05 INFO ShutdownHookManager: Deleting directory /tmp/spark-555307d1-4387-429e-bb3d-73d3cc974622
+[2023-01-21T16:52:05.927+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 426, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master local --jars /usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.
+[2023-01-21T16:52:05.933+0000] {taskinstance.py:1322} INFO - Marking task as FAILED. dag_id=ingestion-energydata, task_id=transform_stage_generation, execution_date=20210101T010000, start_date=20230121T165157, end_date=20230121T165205
+[2023-01-21T16:52:05.973+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 242 for task transform_stage_generation (Cannot execute: spark-submit --master local --jars /usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.; 65)
+[2023-01-21T16:52:06.034+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-21T16:52:06.059+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-01-21T22:23:42.267+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-21T22:23:42.276+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-21T22:23:42.276+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T22:23:42.277+0000] {taskinstance.py:1284} INFO - Starting attempt 4 of 4
+[2023-01-21T22:23:42.277+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T22:23:42.289+0000] {taskinstance.py:1304} INFO - Executing <Task(SparkSubmitOperator): transform_stage_generation> on 2021-01-01 01:00:00+00:00
+[2023-01-21T22:23:42.304+0000] {standard_task_runner.py:55} INFO - Started process 1446 to run task
+[2023-01-21T22:23:42.309+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ingestion-energydata', 'transform_stage_generation', 'scheduled__2021-01-01T01:00:00+00:00', '--job-id', '253', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmphd1yba04']
+[2023-01-21T22:23:42.312+0000] {standard_task_runner.py:83} INFO - Job 253: Subtask transform_stage_generation
+[2023-01-21T22:23:42.388+0000] {task_command.py:389} INFO - Running <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [running]> on host 4260804338b2
+[2023-01-21T22:23:42.449+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=ingestion-energydata
+AIRFLOW_CTX_TASK_ID=transform_stage_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T01:00:00+00:00
+[2023-01-21T22:23:42.458+0000] {base.py:73} INFO - Using connection ID 'spark_local' for task execution.
+[2023-01-21T22:23:42.459+0000] {spark_submit.py:344} INFO - Spark-Submit cmd: spark-submit --master local --jars /usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET
+[2023-01-21T22:23:50.187+0000] {spark_submit.py:495} INFO - 23/01/21 22:23:50 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-01-21T22:23:51.280+0000] {spark_submit.py:495} INFO - 23/01/21 22:23:51 WARN DependencyUtils: Local jar /opt/***/ /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar does not exist, skipping.
+[2023-01-21T22:23:51.630+0000] {spark_submit.py:495} INFO - Traceback (most recent call last):
+[2023-01-21T22:23:51.630+0000] {spark_submit.py:495} INFO - File "/opt/***/plugins/scripts/transform_raw_staging.py", line 2, in <module>
+[2023-01-21T22:23:51.630+0000] {spark_submit.py:495} INFO - from dotenv import load_dotenv, find_dotenv
+[2023-01-21T22:23:51.631+0000] {spark_submit.py:495} INFO - ModuleNotFoundError: No module named 'dotenv'
+[2023-01-21T22:23:51.713+0000] {spark_submit.py:495} INFO - 23/01/21 22:23:51 INFO ShutdownHookManager: Shutdown hook called
+[2023-01-21T22:23:51.742+0000] {spark_submit.py:495} INFO - 23/01/21 22:23:51 INFO ShutdownHookManager: Deleting directory /tmp/spark-f3d1a79e-1f5e-469a-ac59-7702c39ae8df
+[2023-01-21T22:23:52.054+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 426, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master local --jars /usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.
+[2023-01-21T22:23:52.060+0000] {taskinstance.py:1322} INFO - Marking task as FAILED. dag_id=ingestion-energydata, task_id=transform_stage_generation, execution_date=20210101T010000, start_date=20230121T222342, end_date=20230121T222352
+[2023-01-21T22:23:52.134+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 253 for task transform_stage_generation (Cannot execute: spark-submit --master local --jars /usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.; 1446)
+[2023-01-21T22:23:52.232+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-21T22:23:52.305+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-01-22T00:08:32.520+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-22T00:08:32.559+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-22T00:08:32.560+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T00:08:32.560+0000] {taskinstance.py:1284} INFO - Starting attempt 4 of 4
+[2023-01-22T00:08:32.560+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T00:08:32.598+0000] {taskinstance.py:1304} INFO - Executing <Task(SparkSubmitOperator): transform_stage_generation> on 2021-01-01 01:00:00+00:00
+[2023-01-22T00:08:32.615+0000] {standard_task_runner.py:55} INFO - Started process 74 to run task
+[2023-01-22T00:08:32.626+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ingestion-energydata', 'transform_stage_generation', 'scheduled__2021-01-01T01:00:00+00:00', '--job-id', '265', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmp_8wk86y6']
+[2023-01-22T00:08:32.631+0000] {standard_task_runner.py:83} INFO - Job 265: Subtask transform_stage_generation
+[2023-01-22T00:08:32.781+0000] {task_command.py:389} INFO - Running <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [running]> on host 669043c9475c
+[2023-01-22T00:08:32.943+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=ingestion-energydata
+AIRFLOW_CTX_TASK_ID=transform_stage_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T01:00:00+00:00
+[2023-01-22T00:08:32.960+0000] {base.py:73} INFO - Using connection ID 'spark_local' for task execution.
+[2023-01-22T00:08:32.966+0000] {spark_submit.py:344} INFO - Spark-Submit cmd: spark-submit --master local --jars /usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET
+[2023-01-22T00:08:40.219+0000] {spark_submit.py:495} INFO - 23/01/22 00:08:40 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-01-22T00:08:40.660+0000] {spark_submit.py:495} INFO - 23/01/22 00:08:40 WARN DependencyUtils: Local jar /opt/***/ /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar does not exist, skipping.
+[2023-01-22T00:08:41.177+0000] {spark_submit.py:495} INFO - Traceback (most recent call last):
+[2023-01-22T00:08:41.177+0000] {spark_submit.py:495} INFO - File "/opt/***/plugins/scripts/transform_raw_staging.py", line 64, in <module>
+[2023-01-22T00:08:41.177+0000] {spark_submit.py:495} INFO - main(metrics_label=metrics_label, start=start, end=end, country_code=country_code)
+[2023-01-22T00:08:41.177+0000] {spark_submit.py:495} INFO - File "/opt/***/plugins/scripts/transform_raw_staging.py", line 16, in main
+[2023-01-22T00:08:41.177+0000] {spark_submit.py:495} INFO - start_label = start.strftime("%Y%m%d%H%M")
+[2023-01-22T00:08:41.178+0000] {spark_submit.py:495} INFO - AttributeError: 'str' object has no attribute 'strftime'
+[2023-01-22T00:08:41.217+0000] {spark_submit.py:495} INFO - 23/01/22 00:08:41 INFO ShutdownHookManager: Shutdown hook called
+[2023-01-22T00:08:41.219+0000] {spark_submit.py:495} INFO - 23/01/22 00:08:41 INFO ShutdownHookManager: Deleting directory /tmp/spark-2403e2cf-6a48-4710-a939-9e91b091e2d7
+[2023-01-22T00:08:41.322+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 426, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master local --jars /usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.
+[2023-01-22T00:08:41.328+0000] {taskinstance.py:1322} INFO - Marking task as FAILED. dag_id=ingestion-energydata, task_id=transform_stage_generation, execution_date=20210101T010000, start_date=20230122T000832, end_date=20230122T000841
+[2023-01-22T00:08:41.346+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 265 for task transform_stage_generation (Cannot execute: spark-submit --master local --jars /usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.; 74)
+[2023-01-22T00:08:41.399+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-22T00:08:41.423+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-01-22T00:26:52.513+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-22T00:26:52.527+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-22T00:26:52.527+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T00:26:52.527+0000] {taskinstance.py:1284} INFO - Starting attempt 4 of 4
+[2023-01-22T00:26:52.528+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T00:26:52.540+0000] {taskinstance.py:1304} INFO - Executing <Task(SparkSubmitOperator): transform_stage_generation> on 2021-01-01 01:00:00+00:00
+[2023-01-22T00:26:52.547+0000] {standard_task_runner.py:55} INFO - Started process 1752 to run task
+[2023-01-22T00:26:52.550+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ingestion-energydata', 'transform_stage_generation', 'scheduled__2021-01-01T01:00:00+00:00', '--job-id', '274', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmput5br2rv']
+[2023-01-22T00:26:52.553+0000] {standard_task_runner.py:83} INFO - Job 274: Subtask transform_stage_generation
+[2023-01-22T00:26:52.608+0000] {task_command.py:389} INFO - Running <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [running]> on host 669043c9475c
+[2023-01-22T00:26:52.664+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=ingestion-energydata
+AIRFLOW_CTX_TASK_ID=transform_stage_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T01:00:00+00:00
+[2023-01-22T00:26:52.673+0000] {base.py:73} INFO - Using connection ID 'spark_local' for task execution.
+[2023-01-22T00:26:52.674+0000] {spark_submit.py:344} INFO - Spark-Submit cmd: spark-submit --master local --jars /usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET
+[2023-01-22T00:26:55.133+0000] {spark_submit.py:495} INFO - 23/01/22 00:26:55 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-01-22T00:26:55.412+0000] {spark_submit.py:495} INFO - 23/01/22 00:26:55 WARN DependencyUtils: Local jar /opt/***/ /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar does not exist, skipping.
+[2023-01-22T00:26:55.728+0000] {spark_submit.py:495} INFO - Traceback (most recent call last):
+[2023-01-22T00:26:55.728+0000] {spark_submit.py:495} INFO - File "/opt/***/plugins/scripts/transform_raw_staging.py", line 64, in <module>
+[2023-01-22T00:26:55.728+0000] {spark_submit.py:495} INFO - main(metrics_label=metrics_label, start=start, end=end, country_code=country_code)
+[2023-01-22T00:26:55.728+0000] {spark_submit.py:495} INFO - File "/opt/***/plugins/scripts/transform_raw_staging.py", line 16, in main
+[2023-01-22T00:26:55.728+0000] {spark_submit.py:495} INFO - start_label = start.strftime("%Y%m%d%H%M")
+[2023-01-22T00:26:55.728+0000] {spark_submit.py:495} INFO - AttributeError: 'str' object has no attribute 'strftime'
+[2023-01-22T00:26:55.741+0000] {spark_submit.py:495} INFO - 23/01/22 00:26:55 INFO ShutdownHookManager: Shutdown hook called
+[2023-01-22T00:26:55.742+0000] {spark_submit.py:495} INFO - 23/01/22 00:26:55 INFO ShutdownHookManager: Deleting directory /tmp/spark-d18220af-9c4d-48ab-8cfd-42b1bf74f866
+[2023-01-22T00:26:55.790+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 426, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master local --jars /usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.
+[2023-01-22T00:26:55.794+0000] {taskinstance.py:1322} INFO - Marking task as FAILED. dag_id=ingestion-energydata, task_id=transform_stage_generation, execution_date=20210101T010000, start_date=20230122T002652, end_date=20230122T002655
+[2023-01-22T00:26:55.817+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 274 for task transform_stage_generation (Cannot execute: spark-submit --master local --jars /usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.; 1752)
+[2023-01-22T00:26:55.865+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-22T00:26:55.878+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-01-22T04:08:14.279+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-22T04:08:14.292+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-22T04:08:14.292+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T04:08:14.292+0000] {taskinstance.py:1284} INFO - Starting attempt 4 of 4
+[2023-01-22T04:08:14.292+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T04:08:14.302+0000] {taskinstance.py:1304} INFO - Executing <Task(SparkSubmitOperator): transform_stage_generation> on 2021-01-01 01:00:00+00:00
+[2023-01-22T04:08:14.309+0000] {standard_task_runner.py:55} INFO - Started process 2141 to run task
+[2023-01-22T04:08:14.313+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ingestion-energydata', 'transform_stage_generation', 'scheduled__2021-01-01T01:00:00+00:00', '--job-id', '286', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmppv90ooai']
+[2023-01-22T04:08:14.315+0000] {standard_task_runner.py:83} INFO - Job 286: Subtask transform_stage_generation
+[2023-01-22T04:08:14.372+0000] {task_command.py:389} INFO - Running <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [running]> on host e3ae05c9a97e
+[2023-01-22T04:08:14.430+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=ingestion-energydata
+AIRFLOW_CTX_TASK_ID=transform_stage_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T01:00:00+00:00
+[2023-01-22T04:08:14.438+0000] {base.py:73} INFO - Using connection ID 'spark_local' for task execution.
+[2023-01-22T04:08:14.440+0000] {spark_submit.py:344} INFO - Spark-Submit cmd: spark-submit --master local --jars /opt/***/spark/resources/gcs-connector-hadoop3-latest.jar, /opt/***/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET
+[2023-01-22T04:08:17.462+0000] {spark_submit.py:495} INFO - 23/01/22 04:08:17 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-01-22T04:08:17.737+0000] {spark_submit.py:495} INFO - 23/01/22 04:08:17 WARN DependencyUtils: Local jar /opt/***/ /opt/***/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar does not exist, skipping.
+[2023-01-22T04:08:18.111+0000] {spark_submit.py:495} INFO - Traceback (most recent call last):
+[2023-01-22T04:08:18.112+0000] {spark_submit.py:495} INFO - File "/opt/***/plugins/scripts/transform_raw_staging.py", line 64, in <module>
+[2023-01-22T04:08:18.112+0000] {spark_submit.py:495} INFO - main(metrics_label=metrics_label, start=start, end=end, country_code=country_code)
+[2023-01-22T04:08:18.112+0000] {spark_submit.py:495} INFO - File "/opt/***/plugins/scripts/transform_raw_staging.py", line 16, in main
+[2023-01-22T04:08:18.112+0000] {spark_submit.py:495} INFO - start_label = start.strftime("%Y%m%d%H%M")
+[2023-01-22T04:08:18.112+0000] {spark_submit.py:495} INFO - AttributeError: 'str' object has no attribute 'strftime'
+[2023-01-22T04:08:18.135+0000] {spark_submit.py:495} INFO - 23/01/22 04:08:18 INFO ShutdownHookManager: Shutdown hook called
+[2023-01-22T04:08:18.135+0000] {spark_submit.py:495} INFO - 23/01/22 04:08:18 INFO ShutdownHookManager: Deleting directory /tmp/spark-65fa185b-7dc9-4a0a-8d7b-470a380f0225
+[2023-01-22T04:08:18.195+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 426, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master local --jars /opt/***/spark/resources/gcs-connector-hadoop3-latest.jar, /opt/***/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.
+[2023-01-22T04:08:18.199+0000] {taskinstance.py:1322} INFO - Marking task as FAILED. dag_id=ingestion-energydata, task_id=transform_stage_generation, execution_date=20210101T010000, start_date=20230122T040814, end_date=20230122T040818
+[2023-01-22T04:08:18.214+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 286 for task transform_stage_generation (Cannot execute: spark-submit --master local --jars /opt/***/spark/resources/gcs-connector-hadoop3-latest.jar, /opt/***/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.; 2141)
+[2023-01-22T04:08:18.236+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-22T04:08:18.254+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-01-22T04:38:40.797+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-22T04:38:40.817+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-22T04:38:40.817+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T04:38:40.817+0000] {taskinstance.py:1284} INFO - Starting attempt 4 of 4
+[2023-01-22T04:38:40.818+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T04:38:40.845+0000] {taskinstance.py:1304} INFO - Executing <Task(SparkSubmitOperator): transform_stage_generation> on 2021-01-01 01:00:00+00:00
+[2023-01-22T04:38:40.862+0000] {standard_task_runner.py:55} INFO - Started process 488 to run task
+[2023-01-22T04:38:40.877+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ingestion-energydata', 'transform_stage_generation', 'scheduled__2021-01-01T01:00:00+00:00', '--job-id', '299', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmpqz850rkr']
+[2023-01-22T04:38:40.881+0000] {standard_task_runner.py:83} INFO - Job 299: Subtask transform_stage_generation
+[2023-01-22T04:38:41.021+0000] {task_command.py:389} INFO - Running <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [running]> on host 801017642f38
+[2023-01-22T04:38:41.178+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=ingestion-energydata
+AIRFLOW_CTX_TASK_ID=transform_stage_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T01:00:00+00:00
+[2023-01-22T04:38:41.204+0000] {base.py:73} INFO - Using connection ID 'spark_local' for task execution.
+[2023-01-22T04:38:41.207+0000] {spark_submit.py:344} INFO - Spark-Submit cmd: spark-submit --master local --jars gcs-connector-hadoop3-latest.jar, spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET
+[2023-01-22T04:38:53.294+0000] {spark_submit.py:495} INFO - 23/01/22 04:38:53 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-01-22T04:38:54.283+0000] {spark_submit.py:495} INFO - 23/01/22 04:38:54 WARN DependencyUtils: Local jar /opt/***/gcs-connector-hadoop3-latest.jar does not exist, skipping.
+[2023-01-22T04:38:54.284+0000] {spark_submit.py:495} INFO - 23/01/22 04:38:54 WARN DependencyUtils: Local jar /opt/***/ spark-bigquery-with-dependencies_2.13-0.27.1.jar does not exist, skipping.
+[2023-01-22T04:38:55.252+0000] {spark_submit.py:495} INFO - Traceback (most recent call last):
+[2023-01-22T04:38:55.253+0000] {spark_submit.py:495} INFO - File "/opt/***/plugins/scripts/transform_raw_staging.py", line 64, in <module>
+[2023-01-22T04:38:55.253+0000] {spark_submit.py:495} INFO - main(metrics_label=metrics_label, start=start, end=end, country_code=country_code)
+[2023-01-22T04:38:55.253+0000] {spark_submit.py:495} INFO - File "/opt/***/plugins/scripts/transform_raw_staging.py", line 16, in main
+[2023-01-22T04:38:55.253+0000] {spark_submit.py:495} INFO - start_label = start.strftime("%Y%m%d%H%M")
+[2023-01-22T04:38:55.254+0000] {spark_submit.py:495} INFO - AttributeError: 'str' object has no attribute 'strftime'
+[2023-01-22T04:38:55.296+0000] {spark_submit.py:495} INFO - 23/01/22 04:38:55 INFO ShutdownHookManager: Shutdown hook called
+[2023-01-22T04:38:55.298+0000] {spark_submit.py:495} INFO - 23/01/22 04:38:55 INFO ShutdownHookManager: Deleting directory /tmp/spark-47e1ab57-e4f0-4ff7-b2fb-b3014459b5d2
+[2023-01-22T04:38:55.464+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 426, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master local --jars gcs-connector-hadoop3-latest.jar, spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.
+[2023-01-22T04:38:55.477+0000] {taskinstance.py:1322} INFO - Marking task as FAILED. dag_id=ingestion-energydata, task_id=transform_stage_generation, execution_date=20210101T010000, start_date=20230122T043840, end_date=20230122T043855
+[2023-01-22T04:38:55.518+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 299 for task transform_stage_generation (Cannot execute: spark-submit --master local --jars gcs-connector-hadoop3-latest.jar, spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.; 488)
+[2023-01-22T04:38:55.559+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-22T04:38:55.605+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-01-22T06:23:59.791+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-22T06:23:59.812+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-22T06:23:59.812+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T06:23:59.812+0000] {taskinstance.py:1284} INFO - Starting attempt 4 of 4
+[2023-01-22T06:23:59.813+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T06:23:59.836+0000] {taskinstance.py:1304} INFO - Executing <Task(SparkSubmitOperator): transform_stage_generation> on 2021-01-01 01:00:00+00:00
+[2023-01-22T06:23:59.851+0000] {standard_task_runner.py:55} INFO - Started process 1112 to run task
+[2023-01-22T06:23:59.859+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ingestion-energydata', 'transform_stage_generation', 'scheduled__2021-01-01T01:00:00+00:00', '--job-id', '311', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmpwos0_mu7']
+[2023-01-22T06:23:59.865+0000] {standard_task_runner.py:83} INFO - Job 311: Subtask transform_stage_generation
+[2023-01-22T06:24:00.005+0000] {task_command.py:389} INFO - Running <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [running]> on host d68405340607
+[2023-01-22T06:24:00.170+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=ingestion-energydata
+AIRFLOW_CTX_TASK_ID=transform_stage_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T01:00:00+00:00
+[2023-01-22T06:24:00.190+0000] {base.py:73} INFO - Using connection ID 'spark_local' for task execution.
+[2023-01-22T06:24:00.195+0000] {spark_submit.py:344} INFO - Spark-Submit cmd: spark-submit --master local --jars gcs-connector-hadoop3-latest.jar,spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET
+[2023-01-22T06:24:00.219+0000] {spark_submit.py:495} INFO - /home/***/.local/bin/spark-submit: line 27: /opt/spark/bin/spark-class: No such file or directory
+[2023-01-22T06:24:00.241+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 426, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master local --jars gcs-connector-hadoop3-latest.jar,spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 127.
+[2023-01-22T06:24:00.249+0000] {taskinstance.py:1322} INFO - Marking task as FAILED. dag_id=ingestion-energydata, task_id=transform_stage_generation, execution_date=20210101T010000, start_date=20230122T062359, end_date=20230122T062400
+[2023-01-22T06:24:00.278+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 311 for task transform_stage_generation (Cannot execute: spark-submit --master local --jars gcs-connector-hadoop3-latest.jar,spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 127.; 1112)
+[2023-01-22T06:24:00.351+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-22T06:24:00.403+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-01-22T08:14:23.771+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-22T08:14:23.818+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [queued]>
+[2023-01-22T08:14:23.818+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T08:14:23.819+0000] {taskinstance.py:1284} INFO - Starting attempt 4 of 4
+[2023-01-22T08:14:23.820+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T08:14:23.856+0000] {taskinstance.py:1304} INFO - Executing <Task(SparkSubmitOperator): transform_stage_generation> on 2021-01-01 01:00:00+00:00
+[2023-01-22T08:14:23.872+0000] {standard_task_runner.py:55} INFO - Started process 3810 to run task
+[2023-01-22T08:14:23.883+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ingestion-energydata', 'transform_stage_generation', 'scheduled__2021-01-01T01:00:00+00:00', '--job-id', '336', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmpobk1q_8h']
+[2023-01-22T08:14:23.889+0000] {standard_task_runner.py:83} INFO - Job 336: Subtask transform_stage_generation
+[2023-01-22T08:14:24.040+0000] {task_command.py:389} INFO - Running <TaskInstance: ingestion-energydata.transform_stage_generation scheduled__2021-01-01T01:00:00+00:00 [running]> on host 16233a798013
+[2023-01-22T08:14:24.205+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=ingestion-energydata
+AIRFLOW_CTX_TASK_ID=transform_stage_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=4
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T01:00:00+00:00
+[2023-01-22T08:14:24.237+0000] {base.py:73} INFO - Using connection ID 'spark_local' for task execution.
+[2023-01-22T08:14:24.240+0000] {spark_submit.py:344} INFO - Spark-Submit cmd: spark-submit --master local --jars gcs-connector-hadoop3-latest.jar,spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET
+[2023-01-22T08:14:34.547+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-01-22T08:14:35.163+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:35 WARN DependencyUtils: Local jar /opt/***/gcs-connector-hadoop3-latest.jar does not exist, skipping.
+[2023-01-22T08:14:35.164+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:35 WARN DependencyUtils: Local jar /opt/***/spark-bigquery-with-dependencies_2.13-0.27.1.jar does not exist, skipping.
+[2023-01-22T08:14:37.851+0000] {spark_submit.py:495} INFO - /opt/***/plugins/scripts/transform_raw_staging.py__DE_TENNET__total_generation__202101010100.json
+[2023-01-22T08:14:38.059+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:38 INFO SparkContext: Running Spark version 3.3.1
+[2023-01-22T08:14:38.103+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:38 INFO ResourceUtils: ==============================================================
+[2023-01-22T08:14:38.104+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:38 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2023-01-22T08:14:38.105+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:38 INFO ResourceUtils: ==============================================================
+[2023-01-22T08:14:38.106+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:38 INFO SparkContext: Submitted application: gcp_playground
+[2023-01-22T08:14:38.164+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:38 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2023-01-22T08:14:38.176+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:38 INFO ResourceProfile: Limiting resource is cpu
+[2023-01-22T08:14:38.179+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:38 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2023-01-22T08:14:38.407+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:38 INFO SecurityManager: Changing view acls to: ***
+[2023-01-22T08:14:38.409+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:38 INFO SecurityManager: Changing modify acls to: ***
+[2023-01-22T08:14:38.411+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:38 INFO SecurityManager: Changing view acls groups to:
+[2023-01-22T08:14:38.413+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:38 INFO SecurityManager: Changing modify acls groups to:
+[2023-01-22T08:14:38.415+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:38 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(***); groups with view permissions: Set(); users  with modify permissions: Set(***); groups with modify permissions: Set()
+[2023-01-22T08:14:39.710+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:39 INFO Utils: Successfully started service 'sparkDriver' on port 42829.
+[2023-01-22T08:14:39.923+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:39 INFO SparkEnv: Registering MapOutputTracker
+[2023-01-22T08:14:40.224+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:40 INFO SparkEnv: Registering BlockManagerMaster
+[2023-01-22T08:14:40.423+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:40 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2023-01-22T08:14:40.429+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:40 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2023-01-22T08:14:40.458+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:40 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2023-01-22T08:14:40.561+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:40 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-d9d75827-7d31-4c50-8494-247a796c5b01
+[2023-01-22T08:14:40.608+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:40 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2023-01-22T08:14:40.661+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:40 INFO SparkEnv: Registering OutputCommitCoordinator
+[2023-01-22T08:14:41.382+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:41 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2023-01-22T08:14:41.423+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:41 INFO Utils: Successfully started service 'SparkUI' on port 4041.
+[2023-01-22T08:14:41.535+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:41 INFO SparkContext: Added JAR /opt/spark/resources/gcs-connector-hadoop3-latest.jar at spark://16233a798013:42829/jars/gcs-connector-hadoop3-latest.jar with timestamp 1674375278047
+[2023-01-22T08:14:41.536+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:41 INFO SparkContext: Added JAR /opt/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar at spark://16233a798013:42829/jars/spark-bigquery-with-dependencies_2.13-0.27.1.jar with timestamp 1674375278047
+[2023-01-22T08:14:41.740+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:41 INFO Executor: Starting executor ID driver on host 16233a798013
+[2023-01-22T08:14:41.759+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:41 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2023-01-22T08:14:41.795+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:41 INFO Executor: Fetching spark://16233a798013:42829/jars/spark-bigquery-with-dependencies_2.13-0.27.1.jar with timestamp 1674375278047
+[2023-01-22T08:14:41.944+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:41 INFO TransportClientFactory: Successfully created connection to 16233a798013/192.168.32.7:42829 after 87 ms (0 ms spent in bootstraps)
+[2023-01-22T08:14:41.966+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:41 INFO Utils: Fetching spark://16233a798013:42829/jars/spark-bigquery-with-dependencies_2.13-0.27.1.jar to /tmp/spark-0b5480f3-06c0-4a75-bca7-7ee59c146f57/userFiles-cb69772c-ce35-4b31-bc2b-201b02eb0377/fetchFileTemp10536960280684508515.tmp
+[2023-01-22T08:14:42.457+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:42 INFO Executor: Adding file:/tmp/spark-0b5480f3-06c0-4a75-bca7-7ee59c146f57/userFiles-cb69772c-ce35-4b31-bc2b-201b02eb0377/spark-bigquery-with-dependencies_2.13-0.27.1.jar to class loader
+[2023-01-22T08:14:42.458+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:42 INFO Executor: Fetching spark://16233a798013:42829/jars/gcs-connector-hadoop3-latest.jar with timestamp 1674375278047
+[2023-01-22T08:14:42.460+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:42 INFO Utils: Fetching spark://16233a798013:42829/jars/gcs-connector-hadoop3-latest.jar to /tmp/spark-0b5480f3-06c0-4a75-bca7-7ee59c146f57/userFiles-cb69772c-ce35-4b31-bc2b-201b02eb0377/fetchFileTemp2843727763167802852.tmp
+[2023-01-22T08:14:42.789+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:42 INFO Executor: Adding file:/tmp/spark-0b5480f3-06c0-4a75-bca7-7ee59c146f57/userFiles-cb69772c-ce35-4b31-bc2b-201b02eb0377/gcs-connector-hadoop3-latest.jar to class loader
+[2023-01-22T08:14:42.808+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:42 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43461.
+[2023-01-22T08:14:42.809+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:42 INFO NettyBlockTransferService: Server created on 16233a798013:43461
+[2023-01-22T08:14:42.814+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:42 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2023-01-22T08:14:42.836+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:42 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 16233a798013, 43461, None)
+[2023-01-22T08:14:42.846+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:42 INFO BlockManagerMasterEndpoint: Registering block manager 16233a798013:43461 with 434.4 MiB RAM, BlockManagerId(driver, 16233a798013, 43461, None)
+[2023-01-22T08:14:42.855+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:42 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 16233a798013, 43461, None)
+[2023-01-22T08:14:42.858+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:42 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 16233a798013, 43461, None)
+[2023-01-22T08:14:43.988+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:43 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2023-01-22T08:14:43.994+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:43 INFO SharedState: Warehouse path is 'file:/opt/***/spark-warehouse'.
+[2023-01-22T08:14:46.132+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:46 WARN FileStreamSink: Assume no metadata directory. Error while looking for metadata directory in the path: gs://entsoe_analytics_1009//opt/***/plugins/scripts/transform_raw_staging.py__DE_TENNET__total_generation__202101010100.json.
+[2023-01-22T08:14:46.133+0000] {spark_submit.py:495} INFO - org.apache.hadoop.fs.UnsupportedFileSystemException: No FileSystem for scheme "gs"
+[2023-01-22T08:14:46.133+0000] {spark_submit.py:495} INFO - at org.apache.hadoop.fs.FileSystem.getFileSystemClass(FileSystem.java:3443)
+[2023-01-22T08:14:46.133+0000] {spark_submit.py:495} INFO - at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3466)
+[2023-01-22T08:14:46.134+0000] {spark_submit.py:495} INFO - at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+[2023-01-22T08:14:46.134+0000] {spark_submit.py:495} INFO - at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+[2023-01-22T08:14:46.134+0000] {spark_submit.py:495} INFO - at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+[2023-01-22T08:14:46.135+0000] {spark_submit.py:495} INFO - at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+[2023-01-22T08:14:46.135+0000] {spark_submit.py:495} INFO - at org.apache.hadoop.fs.Path.getFileSystem(Path.java:365)
+[2023-01-22T08:14:46.135+0000] {spark_submit.py:495} INFO - at org.apache.spark.sql.execution.streaming.FileStreamSink$.hasMetadata(FileStreamSink.scala:53)
+[2023-01-22T08:14:46.136+0000] {spark_submit.py:495} INFO - at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:370)
+[2023-01-22T08:14:46.136+0000] {spark_submit.py:495} INFO - at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:228)
+[2023-01-22T08:14:46.136+0000] {spark_submit.py:495} INFO - at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:210)
+[2023-01-22T08:14:46.137+0000] {spark_submit.py:495} INFO - at scala.Option.getOrElse(Option.scala:201)
+[2023-01-22T08:14:46.137+0000] {spark_submit.py:495} INFO - at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:210)
+[2023-01-22T08:14:46.137+0000] {spark_submit.py:495} INFO - at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:185)
+[2023-01-22T08:14:46.138+0000] {spark_submit.py:495} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2023-01-22T08:14:46.138+0000] {spark_submit.py:495} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2023-01-22T08:14:46.139+0000] {spark_submit.py:495} INFO - at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2023-01-22T08:14:46.139+0000] {spark_submit.py:495} INFO - at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2023-01-22T08:14:46.140+0000] {spark_submit.py:495} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2023-01-22T08:14:46.140+0000] {spark_submit.py:495} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2023-01-22T08:14:46.140+0000] {spark_submit.py:495} INFO - at py4j.Gateway.invoke(Gateway.java:282)
+[2023-01-22T08:14:46.140+0000] {spark_submit.py:495} INFO - at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2023-01-22T08:14:46.141+0000] {spark_submit.py:495} INFO - at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2023-01-22T08:14:46.141+0000] {spark_submit.py:495} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2023-01-22T08:14:46.141+0000] {spark_submit.py:495} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2023-01-22T08:14:46.142+0000] {spark_submit.py:495} INFO - at java.base/java.lang.Thread.run(Thread.java:829)
+[2023-01-22T08:14:46.182+0000] {spark_submit.py:495} INFO - Error, ada An error occurred while calling o38.load.
+[2023-01-22T08:14:46.183+0000] {spark_submit.py:495} INFO - : org.apache.hadoop.fs.UnsupportedFileSystemException: No FileSystem for scheme "gs"
+[2023-01-22T08:14:46.183+0000] {spark_submit.py:495} INFO - at org.apache.hadoop.fs.FileSystem.getFileSystemClass(FileSystem.java:3443)
+[2023-01-22T08:14:46.184+0000] {spark_submit.py:495} INFO - at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3466)
+[2023-01-22T08:14:46.184+0000] {spark_submit.py:495} INFO - at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+[2023-01-22T08:14:46.184+0000] {spark_submit.py:495} INFO - at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+[2023-01-22T08:14:46.185+0000] {spark_submit.py:495} INFO - at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+[2023-01-22T08:14:46.185+0000] {spark_submit.py:495} INFO - at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+[2023-01-22T08:14:46.185+0000] {spark_submit.py:495} INFO - at org.apache.hadoop.fs.Path.getFileSystem(Path.java:365)
+[2023-01-22T08:14:46.186+0000] {spark_submit.py:495} INFO - at org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$checkAndGlobPathIfNecessary$1(DataSource.scala:752)
+[2023-01-22T08:14:46.186+0000] {spark_submit.py:495} INFO - at scala.collection.immutable.List.map(List.scala:246)
+[2023-01-22T08:14:46.186+0000] {spark_submit.py:495} INFO - at scala.collection.immutable.List.map(List.scala:79)
+[2023-01-22T08:14:46.187+0000] {spark_submit.py:495} INFO - at org.apache.spark.sql.execution.datasources.DataSource$.checkAndGlobPathIfNecessary(DataSource.scala:750)
+[2023-01-22T08:14:46.188+0000] {spark_submit.py:495} INFO - at org.apache.spark.sql.execution.datasources.DataSource.checkAndGlobPathIfNecessary(DataSource.scala:579)
+[2023-01-22T08:14:46.188+0000] {spark_submit.py:495} INFO - at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:408)
+[2023-01-22T08:14:46.189+0000] {spark_submit.py:495} INFO - at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:228)
+[2023-01-22T08:14:46.189+0000] {spark_submit.py:495} INFO - at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:210)
+[2023-01-22T08:14:46.190+0000] {spark_submit.py:495} INFO - at scala.Option.getOrElse(Option.scala:201)
+[2023-01-22T08:14:46.190+0000] {spark_submit.py:495} INFO - at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:210)
+[2023-01-22T08:14:46.190+0000] {spark_submit.py:495} INFO - at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:185)
+[2023-01-22T08:14:46.190+0000] {spark_submit.py:495} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2023-01-22T08:14:46.191+0000] {spark_submit.py:495} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2023-01-22T08:14:46.191+0000] {spark_submit.py:495} INFO - at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2023-01-22T08:14:46.191+0000] {spark_submit.py:495} INFO - at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2023-01-22T08:14:46.191+0000] {spark_submit.py:495} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2023-01-22T08:14:46.192+0000] {spark_submit.py:495} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2023-01-22T08:14:46.192+0000] {spark_submit.py:495} INFO - at py4j.Gateway.invoke(Gateway.java:282)
+[2023-01-22T08:14:46.192+0000] {spark_submit.py:495} INFO - at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2023-01-22T08:14:46.193+0000] {spark_submit.py:495} INFO - at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2023-01-22T08:14:46.193+0000] {spark_submit.py:495} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2023-01-22T08:14:46.193+0000] {spark_submit.py:495} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2023-01-22T08:14:46.193+0000] {spark_submit.py:495} INFO - at java.base/java.lang.Thread.run(Thread.java:829)
+[2023-01-22T08:14:46.194+0000] {spark_submit.py:495} INFO - 
+[2023-01-22T08:14:46.194+0000] {spark_submit.py:495} INFO - Traceback (most recent call last):
+[2023-01-22T08:14:46.194+0000] {spark_submit.py:495} INFO - File "/opt/***/plugins/scripts/transform_raw_staging.py", line 69, in <module>
+[2023-01-22T08:14:46.195+0000] {spark_submit.py:495} INFO - main(metrics_label=metrics_label, start=start, end=end, country_code=country_code)
+[2023-01-22T08:14:46.195+0000] {spark_submit.py:495} INFO - File "/opt/***/plugins/scripts/transform_raw_staging.py", line 56, in main
+[2023-01-22T08:14:46.195+0000] {spark_submit.py:495} INFO - df_spark.write.format("bigquery").option("project", "rafzul-analytics-1009") \
+[2023-01-22T08:14:46.196+0000] {spark_submit.py:495} INFO - UnboundLocalError: local variable 'df_spark' referenced before assignment
+[2023-01-22T08:14:46.287+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:46 INFO SparkContext: Invoking stop() from shutdown hook
+[2023-01-22T08:14:46.312+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:46 INFO SparkUI: Stopped Spark web UI at http://16233a798013:4041
+[2023-01-22T08:14:46.340+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:46 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2023-01-22T08:14:46.369+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:46 INFO MemoryStore: MemoryStore cleared
+[2023-01-22T08:14:46.370+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:46 INFO BlockManager: BlockManager stopped
+[2023-01-22T08:14:46.390+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:46 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2023-01-22T08:14:46.400+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:46 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2023-01-22T08:14:46.448+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:46 INFO SparkContext: Successfully stopped SparkContext
+[2023-01-22T08:14:46.449+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:46 INFO ShutdownHookManager: Shutdown hook called
+[2023-01-22T08:14:46.451+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:46 INFO ShutdownHookManager: Deleting directory /tmp/spark-0b5480f3-06c0-4a75-bca7-7ee59c146f57
+[2023-01-22T08:14:46.469+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:46 INFO ShutdownHookManager: Deleting directory /tmp/spark-c38c2647-25e5-4db0-b642-d3f8c99afdf0
+[2023-01-22T08:14:46.488+0000] {spark_submit.py:495} INFO - 23/01/22 08:14:46 INFO ShutdownHookManager: Deleting directory /tmp/spark-0b5480f3-06c0-4a75-bca7-7ee59c146f57/pyspark-1f6645f2-12e9-4669-8d0e-6f2ca61c40e5
+[2023-01-22T08:14:46.682+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 426, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master local --jars gcs-connector-hadoop3-latest.jar,spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.
+[2023-01-22T08:14:46.691+0000] {taskinstance.py:1322} INFO - Marking task as FAILED. dag_id=ingestion-energydata, task_id=transform_stage_generation, execution_date=20210101T010000, start_date=20230122T081423, end_date=20230122T081446
+[2023-01-22T08:14:46.721+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 336 for task transform_stage_generation (Cannot execute: spark-submit --master local --jars gcs-connector-hadoop3-latest.jar,spark-bigquery-with-dependencies_2.13-0.27.1.jar --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010100 202101010200 DE_TENNET. Error code is: 1.; 3810)
+[2023-01-22T08:14:46.784+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-22T08:14:46.831+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

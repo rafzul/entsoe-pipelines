@@ -70,24 +70,23 @@ x-airflow-common:
     ENTSOE_SECURITY_TOKEN: "${ENTSOE_SECURITY_TOKEN}"
     #setup JAVA
     JAVA_HOME: "${JAVA_HOME}"
-    #define spark version
+    #define spark version 
     SPARK_VERSION: "3.3.1"
     HADOOP_VERSION: "3"
     SCALA_VERSION: "2.13"
-    SPARK_HOME: "/usr/local/spark"
-    PYSPARK_PYTHON: "/usr/bin/python3.9"
-    PYSPARK_DRIVER_PYTHON: "/usr/bin/python3.9"
+    SPARK_HOME: "/opt/spark"
+    PYSPARK_PYTHON: "python3.10"
+    PYSPARK_DRIVER_PYTHON: "python3.10"
     # PYTHONPATH: "${PYTHONPATH}"
     # PATH: "${SPARK_HOME}/bin:${SPARK_HOME}/sbin:${JAVA_HOME}/bin:${PATH}"
     # PATH: "${PATH}"
     #-------------------------
-
   volumes:
     - ~/.google/credentials/:/.google/credentials:ro
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
-    - ./spark/resources:/usr/local/spark/resources
+    # - ./spark/resources:/opt/spark/resources
     - ./.env:/opt/airflow/.env
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
@@ -97,56 +96,7 @@ x-airflow-common:
     postgres:
       condition: service_healthy
 
-services:
-  #define spark services
-  spark:
-    image: bitnami/spark:3.3.1
-    environment:
-      - SPARK_MODE=master
-      - SPARK_RPC_AUTHENTICATION_ENABLED=no
-      - SPARK_RPC_ENCRYPTION_ENABLED=no
-      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
-      - SPARK_SSL_ENABLED=no
-    ports:
-      - '8181:8181'
-      - '7077:7077'
-    volumes:
-      - ./spark/resources:/usr/local/spark/resources
-      - ./spark/requirements_spark.txt:/opt/requirements_spark.txt
-    tty: true
-
-  spark-worker-1:
-    image: bitnami/spark:3.3.1
-    environment:
-        - SPARK_MODE=worker
-        - SPARK_MASTER_URL=spark://spark:7077
-        - SPARK_WORKER_MEMORY=350M
-        - SPARK_WORKER_CORES=1
-        - SPARK_RPC_AUTHENTICATION_ENABLED=no
-        - SPARK_RPC_ENCRYPTION_ENABLED=no
-        - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
-        - SPARK_SSL_ENABLED=no
-    volumes:
-      - ./spark/resources:/usr/local/spark/resources
-      - ./spark/requirements_spark.txt:/opt/requirements_spark.txt
-    tty: true
-
-  spark-worker-2:
-    image: bitnami/spark:3.3.1 
-    environment:
-        - SPARK_MODE=worker
-        - SPARK_MASTER_URL=spark://spark:7077
-        - SPARK_WORKER_MEMORY=350M
-        - SPARK_WORKER_CORES=1  
-        - SPARK_RPC_AUTHENTICATION_ENABLED=no
-        - SPARK_RPC_ENCRYPTION_ENABLED=no
-        - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
-        - SPARK_SSL_ENABLED=no
-    volumes:
-      - ./spark/resources:/usr/local/spark/resources
-      - ./spark/requirements_spark.txt:/opt/requirements_spark.txt
-    tty: true
-    
+services:  
   postgres:
     image: postgres:13
     environment:
@@ -348,6 +298,61 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    #define spark services
+  spark:
+    build: 
+      context: .
+      dockerfile: ./spark/spark.Dockerfile
+    user: root
+    hostname: spark
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    ports:
+      - '8181:8181'
+      - '7077:7077'
+    # volumes:
+    #   - ./spark/resources:/opt/spark/resources
+    tty: true
+
+  spark-worker-1:
+    build: 
+      context: .
+      dockerfile: ./spark/spark.Dockerfile
+    user: root
+    environment:
+        - SPARK_MODE=worker
+        - SPARK_MASTER_URL=spark://spark:7077
+        - SPARK_WORKER_MEMORY=350M
+        - SPARK_WORKER_CORES=1
+        - SPARK_RPC_AUTHENTICATION_ENABLED=no
+        - SPARK_RPC_ENCRYPTION_ENABLED=no
+        - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+        - SPARK_SSL_ENABLED=no
+    # volumes:
+    #     - ./spark/resources:/opt/spark/resources
+    tty: true
+
+  spark-worker-2:
+    build: 
+      context: .
+      dockerfile: ./spark/spark.Dockerfile
+    user: root
+    environment:
+        - SPARK_MODE=worker
+        - SPARK_MASTER_URL=spark://spark:7077
+        - SPARK_WORKER_MEMORY=350M
+        - SPARK_WORKER_CORES=1  
+        - SPARK_RPC_AUTHENTICATION_ENABLED=no
+        - SPARK_RPC_ENCRYPTION_ENABLED=no
+        - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+        - SPARK_SSL_ENABLED=no
+    # volumes:
+    #     - ./spark/resources:/opt/spark/resources
+    tty: true
 
 volumes:
   postgres-db-volume:

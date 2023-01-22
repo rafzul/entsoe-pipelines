@@ -1,6 +1,6 @@
 # First-time build can take upto 10 mins.
 
-FROM doc
+FROM apache/airflow:2.5.0-python3.10
 ENV AIRFLOW_HOME=/opt/airflow
 
 #define spark version
@@ -35,7 +35,7 @@ RUN export JAVA_HOME
 
 #set spark files and variables
 RUN cd 
-ENV SPARK_HOME="/usr/local/spark"
+ENV SPARK_HOME="/opt/spark"
 
 #wget spark and extract
 RUN cd "/tmp" && \
@@ -43,13 +43,16 @@ RUN cd "/tmp" && \
     wget --no-verbose "https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}-scala${SCALA_VERSION}.tgz" && \
     tar -xvzf "spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}-scala${SCALA_VERSION}.tgz" -C "${SPARK_HOME}" --strip-components=1
 
+COPY ./spark/spark-bigquery-with-dependencies_2.13-0.27.1.jar /opt/spark/spark-bigquery-with-dependencies_2.13-0.27.1.jar
+COPY ./spark/gcs-connector-hadoop3-latest.jar /opt/spark/gcs-connector-hadoop3-latest.jar
+
 #create SPARK_HOME env var
 RUN export SPARK_HOME
-ENV PATH="${SPARK_HOME}/bin:${SPARK_HOME}/sbin:${JAVA_HOME}/bin:${PATH}"
+ENV PATH="${SPARK_HOME}:{SPARK_HOME}/bin:${SPARK_HOME}/sbin:${JAVA_HOME}/bin:${PATH}"
 
 #setup python path for spark
-ENV PYSPARK_PYTHON="/usr/bin/python3.9"
-ENV PYSPARK_DRIVER_PYTHON="/usr/bin/python3.9"
+ENV PYSPARK_PYTHON="python3.10"
+ENV PYSPARK_DRIVER_PYTHON="python3.10"
 ENV PYTHONPATH="${SPARK_HOME}/python/:${SPARK_HOME}/python/lib/py4j-*-src.zip:${PYTHONPATH}"
 RUN export PYSPARK_PYTHON
 RUN export PYSPARK_DRIVER_PYTHON

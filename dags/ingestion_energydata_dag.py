@@ -49,7 +49,7 @@ transform_stage_generation = SparkSubmitOperator(
     task_id="transform_stage_generation",
     dag=dag,
     conn_id="spark_local",
-    jars="/usr/local/spark/resources/gcs-connector-hadoop3-latest.jar, /usr/local/spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar",
+    jars="gcs-connector-hadoop3-latest.jar,spark-bigquery-with-dependencies_2.13-0.27.1.jar",
     application="/opt/airflow/plugins/scripts/transform_raw_staging.py",
     application_args=["total_generation", start, end, country_code],
 )

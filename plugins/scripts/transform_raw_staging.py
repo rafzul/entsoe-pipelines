@@ -2,39 +2,39 @@ import os
 from dotenv import load_dotenv, find_dotenv
 import sys
 
+from pyspark import SparkContext, SparkConf
+from pyspark.sql import SparkSession
+
 # class TransformTSRawStaging:
 
 
-# load env variables
-load_dotenv("/opt/airflow/.env", verbose=True)
-
-# setting up GCP variables
-gcs_bucket = os.environ.get("GCP_GCS_BUCKET")
-service_account_file = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
-
-
 def main(metrics_label, start, end, country_code):
+    # load env variables
+    load_dotenv("/opt/airflow/.env", verbose=True)
 
-    start_label = start.strftime("%Y%m%d%H%M")
-    end_label = end.strftime("%Y%m%d%H%M")
+    # setting up GCP variables
+    gcs_bucket = os.environ.get("GCP_GCS_BUCKET")
+    service_account_file = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
+
+    start_label = start
+    end_label = end
     landing_filename = (
         f"{metrics_label}__{country_code}__{start_label}__{end_label}.json"
     )
+    print(landing_filename)
 
     # setting up GCP variables
     gcs_bucket = os.environ.get("GCP_GCS_BUCKET")
     SPARK_HOME = os.environ["SPARK_HOME"]
 
     # fmt: off
-    spark = (
-        SparkSession.builder.appName("gcp_playground")
-        .config("spark.jars",f"{SPARK_HOME}/resources/gcs-connector-hadoop3-latest.jar, {SPARK_HOME}/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar",)
-        .config("spark.sql.session.timeZone", "UTC")
-        .config("spark.hadoop.fs.AbstractFileSystem.gs.impl","google.cloud.hadoop.fs.gcs.GoogleHadoopFS",)
-        .config("spark.hadoop.google.cloud.auth.service.account.enable", "true")
-        .config("spark.hadoop.google.cloud.auth.service.account.json.keyfile",service_account_file)
+    spark = SparkSession.builder \
+        .appName("gcp_playground") \
+        .config("spark.sql.session.timeZone", "UTC") \
+        .config("spark.hadoop.fs.AbstractFileSystem.gs.impl","google.cloud.hadoop.fs.gcs.GoogleHadoopFS",) \
+        .config("spark.hadoop.google.cloud.auth.service.account.enable", "true") \
+        .config("spark.hadoop.google.cloud.auth.service.account.json.keyfile",service_account_file) \
         .getOrCreate()
-    )
     # fmt: on
 
     path = f"gs://{gcs_bucket}/{landing_filename}"
@@ -46,6 +46,7 @@ def main(metrics_label, start, end, country_code):
             .load(path)
         )
     except Exception as e:
+        print(f"Error, ada {e}")
         pass
 
     # upload to staging
