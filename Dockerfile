@@ -43,8 +43,8 @@ RUN cd "/tmp" && \
     wget --no-verbose "https://downloads.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}-scala${SCALA_VERSION}.tgz" && \
     tar -xvzf "spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}-scala${SCALA_VERSION}.tgz" -C "${SPARK_HOME}" --strip-components=1
 
-COPY ./spark/spark-bigquery-with-dependencies_2.13-0.27.1.jar /opt/spark/spark-bigquery-with-dependencies_2.13-0.27.1.jar
-COPY ./spark/gcs-connector-hadoop3-latest.jar /opt/spark/gcs-connector-hadoop3-latest.jar
+COPY ./spark/spark-bigquery-with-dependencies_2.13-0.27.1.jar /opt/spark/jars/spark-bigquery-with-dependencies_2.13-0.27.1.jar
+COPY ./spark/gcs-connector-hadoop3-latest.jar /opt/spark/jars/gcs-connector-hadoop3-latest.jar
 
 #create SPARK_HOME env var
 RUN export SPARK_HOME

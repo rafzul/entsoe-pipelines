@@ -13,6 +13,6 @@ RUN export PATH
 COPY ./spark/requirements_spark.txt /opt/spark/requirements_spark.txt
 RUN pip3 install --no-cache-dir -r /opt/spark/requirements_spark.txt
 
-COPY ./spark/spark-bigquery-with-dependencies_2.13-0.27.1.jar /opt/spark/spark-bigquery-with-dependencies_2.13-0.27.1.jar
-COPY ./spark/gcs-connector-hadoop3-latest.jar /opt/spark/gcs-connector-hadoop3-latest.jar
+COPY ./spark/spark-bigquery-with-dependencies_2.13-0.27.1.jar /opt/spark/jars/spark-bigquery-with-dependencies_2.13-0.27.1.jar
+COPY ./spark/gcs-connector-hadoop3-latest.jar /opt/spark/jars/gcs-connector-hadoop3-latest.jar
 
