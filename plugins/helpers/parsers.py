@@ -36,42 +36,55 @@ def _parse_resolution_to_timedelta(resolution_column: str) -> str:
 
 # parsing datetime
 def parse_datetimeindex(spark, df_ts, df_nonts, tz=None):
-    start = df_nonts.select((F.col("time_Period_timeInterval_start"))).collect()[0][0]
-    end = df_nonts.select((F.col("time_Period_timeInterval_end"))).collect()[0][0]
-    print(start, end)
-    return start, end
+    start = df_nonts.select(
+        F.to_utc_timestamp(F.col("time_Period_timeInterval_start"), "+07:00")
+    ).collect()
+    end = df_nonts.select(
+        F.to_utc_timestamp(F.col("time_Period_timeInterval_end"), "+07:00")
+    ).collect()
     # if tz is not None:
     #     start = df_nonts.select(
-    #         F.from_utc_timestamp(F.col("time_Period_timeInterval_start"), tz)
+    #         F.to_utc_timestamp(F.col("time_Period_timeInterval_start"), tz)
     #     ).collect[0][0]
     #     end = df_nonts.select(
-    #         F.from_utc_timestamp(F.col("time_Period_timeInterval_end"), tz)
+    #         F.to_utc_timestamp(F.col("time_Period_timeInterval_end"), tz)
     #     ).collect()[0][0]
     # print(start)
     # print(end)
 
-    # # ambil resolution dan parse
-    # resolution_col = df_ts.select(F.col("Period_resolution")).collect()[0][0]
-    # delta = _parse_resolution_to_timedelta(resolution_col)
-    # print(delta)
+    # ambil resolution dan parse
+    resolution_col = df_ts.select(F.col("Period_resolution")).collect()[0][0]
+    delta = _parse_resolution_to_timedelta(resolution_col)
 
-    # # generate date index
-    # # date_index = spark.createDataFrame([{'date':1}]).select(F.explode(F.sequence(F.lit(start),F.lit(end),F.expr(delta))).alias("ts_index"))
-    # date_index = spark.sql(
-    #     f"SELECT sequence(to_timestamp('{start}'), to_timestamp('{end}'), {delta}) as ts_index"
-    # ).withColumn("ts_index", F.explode(F.col("ts_index")))
-    # # if tz is not None:
-    # #     #case kalo di parse_timeindex: weekly granularity bakal nambah index element karena ada Daylight Saving Time. Harus di kurangin
-    # #     #sementara skip dulu
-    # #     pass
-    # # generate row number
+    # generate date index
+    # date_index = spark.createDataFrame([{'date':1}]).select(F.explode(F.sequence(F.lit(start),F.lit(end),F.expr(delta))).alias("ts_index"))
+    date_index = spark.sql(
+        f"SELECT sequence(to_timestamp('{start}'), to_timestamp('{end}'), {delta}) as ts_index"
+    ).withColumn("ts_index", F.explode(F.col("ts_index")))
+    # if tz is not None:
+    #     #case kalo di parse_timeindex: weekly granularity bakal nambah index element karena ada Daylight Saving Time. Harus di kurangin
+    #     #sementara skip dulu
+    #     pass
+    # generate row number
+
+    date_index = (
+        date_index.select("ts_index")
+        .distinct()
+        .withColumn(
+            "position",
+            F.expr(
+                "ROW_NUMBER() OVER (PARTITION BY '1' ORDER BY ts_index) AS position"
+            ),
+        )
+    )
+    # alternatif pake built in function spark
     # w = Window.partitionBy(F.lit(1)).orderBy("ts_index")
     # date_index = (
     #     date_index.select("ts_index")
     #     .distinct()
     #     .withColumn("position", F.row_number().over(w))
     # )
-    # return date_index
+    return date_index
 
 
 # parsing generation timeseries function
