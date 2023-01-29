@@ -13522,3 +13522,87 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'scripts'
 [2023-01-29T10:08:45.451+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
 [2023-01-29T10:08:45.471+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.046 seconds
+[2023-01-29T10:09:15.676+0000] {processor.py:153} INFO - Started process (PID=29748) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:09:15.685+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-29T10:09:15.686+0000] {logging_mixin.py:137} INFO - [2023-01-29T10:09:15.686+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:09:15.700+0000] {logging_mixin.py:137} INFO - [2023-01-29T10:09:15.700+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 8, in <module>
+    from scripts.extract_raw import extract_raw_data
+ModuleNotFoundError: No module named 'scripts'
+[2023-01-29T10:09:15.701+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:09:15.725+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.052 seconds
+[2023-01-29T10:09:45.905+0000] {processor.py:153} INFO - Started process (PID=29777) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:09:45.914+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-29T10:09:45.915+0000] {logging_mixin.py:137} INFO - [2023-01-29T10:09:45.915+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:09:45.929+0000] {logging_mixin.py:137} INFO - [2023-01-29T10:09:45.928+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 8, in <module>
+    from scripts.extract_raw import extract_raw_data
+ModuleNotFoundError: No module named 'scripts'
+[2023-01-29T10:09:45.930+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:09:45.955+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.056 seconds
+[2023-01-29T10:10:16.097+0000] {processor.py:153} INFO - Started process (PID=29807) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:10:16.098+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-29T10:10:16.098+0000] {logging_mixin.py:137} INFO - [2023-01-29T10:10:16.098+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:10:16.109+0000] {logging_mixin.py:137} INFO - [2023-01-29T10:10:16.108+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 8, in <module>
+    from scripts.extract_raw import extract_raw_data
+ModuleNotFoundError: No module named 'scripts'
+[2023-01-29T10:10:16.109+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:10:16.129+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.036 seconds
+[2023-01-29T10:10:46.337+0000] {processor.py:153} INFO - Started process (PID=29842) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:10:46.339+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-29T10:10:46.339+0000] {logging_mixin.py:137} INFO - [2023-01-29T10:10:46.339+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:10:46.355+0000] {logging_mixin.py:137} INFO - [2023-01-29T10:10:46.354+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 8, in <module>
+    from scripts.extract_raw import extract_raw_data
+ModuleNotFoundError: No module named 'scripts'
+[2023-01-29T10:10:46.356+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:10:46.385+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.052 seconds
+[2023-01-29T10:11:16.587+0000] {processor.py:153} INFO - Started process (PID=29865) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:11:16.590+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-29T10:11:16.591+0000] {logging_mixin.py:137} INFO - [2023-01-29T10:11:16.591+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:11:16.626+0000] {logging_mixin.py:137} INFO - [2023-01-29T10:11:16.623+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 8, in <module>
+    from scripts.extract_raw import extract_raw_data
+ModuleNotFoundError: No module named 'scripts'
+[2023-01-29T10:11:16.627+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:11:16.678+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.100 seconds
+[2023-01-29T10:11:46.775+0000] {processor.py:153} INFO - Started process (PID=29902) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:11:46.784+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-01-29T10:11:46.785+0000] {logging_mixin.py:137} INFO - [2023-01-29T10:11:46.785+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:11:46.797+0000] {logging_mixin.py:137} INFO - [2023-01-29T10:11:46.796+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/ingestion_energydata_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_energydata_dag.py", line 8, in <module>
+    from scripts.extract_raw import extract_raw_data
+ModuleNotFoundError: No module named 'scripts'
+[2023-01-29T10:11:46.797+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-01-29T10:11:46.817+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.046 seconds
