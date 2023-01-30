@@ -66,6 +66,8 @@ x-airflow-common:
     #google shit
     GCP_PROJECT_ID: "${GCP_PROJECT_ID}"
     GCP_GCS_BUCKET: "${GCP_GCS_BUCKET}"
+    GCP_GCS_TEMP_BUCKET: "${GCP_GCS_TEMP_BUCKET}"
+    BQ_DATASET: "${BQ_DATASET}"
     #entsoe credentials
     ENTSOE_SECURITY_TOKEN: "${ENTSOE_SECURITY_TOKEN}"
     #setup JAVA
@@ -77,6 +79,8 @@ x-airflow-common:
     SPARK_HOME: "/opt/spark"
     PYSPARK_PYTHON: "python3.10"
     PYSPARK_DRIVER_PYTHON: "python3.10"
+    #airflow webserver reload
+    AIRFLOW__WEBSERVER__RELOAD_ON_PLUGIN_CHANGE: "true"
     # PYTHONPATH: "${PYTHONPATH}"
     # PATH: "${SPARK_HOME}/bin:${SPARK_HOME}/sbin:${JAVA_HOME}/bin:${PATH}"
     # PATH: "${PATH}"
