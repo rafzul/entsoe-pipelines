@@ -1,0 +1,137 @@
+[2023-01-31T12:06:50.284+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.stage_total_generation scheduled__2021-01-01T04:00:00+00:00 [queued]>
+[2023-01-31T12:06:50.312+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.stage_total_generation scheduled__2021-01-01T04:00:00+00:00 [queued]>
+[2023-01-31T12:06:50.312+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T12:06:50.312+0000] {taskinstance.py:1284} INFO - Starting attempt 2 of 4
+[2023-01-31T12:06:50.313+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T12:06:50.353+0000] {taskinstance.py:1304} INFO - Executing <Task(SparkSubmitOperator): stage_total_generation> on 2021-01-01 04:00:00+00:00
+[2023-01-31T12:06:50.382+0000] {standard_task_runner.py:55} INFO - Started process 459 to run task
+[2023-01-31T12:06:50.401+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'entsoe-energydata-backfill', 'stage_total_generation', 'scheduled__2021-01-01T04:00:00+00:00', '--job-id', '988', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmp8ci578z3']
+[2023-01-31T12:06:50.414+0000] {standard_task_runner.py:83} INFO - Job 988: Subtask stage_total_generation
+[2023-01-31T12:06:50.557+0000] {task_command.py:389} INFO - Running <TaskInstance: entsoe-energydata-backfill.stage_total_generation scheduled__2021-01-01T04:00:00+00:00 [running]> on host 8124f810dec3
+[2023-01-31T12:06:50.682+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=entsoe-energydata-backfill
+AIRFLOW_CTX_TASK_ID=stage_total_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T04:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T04:00:00+00:00
+[2023-01-31T12:06:50.699+0000] {base.py:73} INFO - Using connection ID 'spark_local' for task execution.
+[2023-01-31T12:06:50.701+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 398, in submit
+    spark_submit_cmd = self._build_spark_submit_command(application)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 344, in _build_spark_submit_command
+    self.log.info("Spark-Submit cmd: %s", self._mask_cmd(connection_cmd))
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 256, in _mask_cmd
+    " ".join(connection_cmd),
+TypeError: sequence item 10: expected str instance, DateTime found
+[2023-01-31T12:06:50.719+0000] {taskinstance.py:1322} INFO - Marking task as UP_FOR_RETRY. dag_id=entsoe-energydata-backfill, task_id=stage_total_generation, execution_date=20210101T040000, start_date=20230131T120650, end_date=20230131T120650
+[2023-01-31T12:06:50.753+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 988 for task stage_total_generation (sequence item 10: expected str instance, DateTime found; 459)
+[2023-01-31T12:06:50.809+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-31T12:06:50.839+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-01-31T12:29:59.253+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.stage_total_generation scheduled__2021-01-01T04:00:00+00:00 [queued]>
+[2023-01-31T12:29:59.365+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.stage_total_generation scheduled__2021-01-01T04:00:00+00:00 [queued]>
+[2023-01-31T12:29:59.377+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T12:29:59.383+0000] {taskinstance.py:1284} INFO - Starting attempt 2 of 4
+[2023-01-31T12:29:59.386+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T12:29:59.528+0000] {taskinstance.py:1304} INFO - Executing <Task(SparkSubmitOperator): stage_total_generation> on 2021-01-01 04:00:00+00:00
+[2023-01-31T12:29:59.564+0000] {standard_task_runner.py:55} INFO - Started process 87 to run task
+[2023-01-31T12:29:59.582+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'entsoe-energydata-backfill', 'stage_total_generation', 'scheduled__2021-01-01T04:00:00+00:00', '--job-id', '1010', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmprq2cl29m']
+[2023-01-31T12:29:59.592+0000] {standard_task_runner.py:83} INFO - Job 1010: Subtask stage_total_generation
+[2023-01-31T12:29:59.987+0000] {task_command.py:389} INFO - Running <TaskInstance: entsoe-energydata-backfill.stage_total_generation scheduled__2021-01-01T04:00:00+00:00 [running]> on host 213f57d06c83
+[2023-01-31T12:30:00.375+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=entsoe-energydata-backfill
+AIRFLOW_CTX_TASK_ID=stage_total_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T04:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T04:00:00+00:00
+[2023-01-31T12:30:00.425+0000] {base.py:73} INFO - Using connection ID 'spark_local' for task execution.
+[2023-01-31T12:30:00.429+0000] {spark_submit.py:344} INFO - Spark-Submit cmd: spark-submit --master local --name arrow-spark /opt/***/plugins/scripts/transform_raw_staging.py total_generation 202101010400 202101010500 DE_TENNET 202101010000 202101010600
+[2023-01-31T12:30:37.180+0000] {spark_submit.py:495} INFO - mulai periode: 202101010000
+[2023-01-31T12:30:37.182+0000] {spark_submit.py:495} INFO - selesai periode: 202101010600
+[2023-01-31T12:30:37.802+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:37 INFO SparkContext: Running Spark version 3.3.1
+[2023-01-31T12:30:39.408+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:39 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-01-31T12:30:41.168+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:41 INFO ResourceUtils: ==============================================================
+[2023-01-31T12:30:41.172+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:41 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2023-01-31T12:30:41.182+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:41 INFO ResourceUtils: ==============================================================
+[2023-01-31T12:30:41.185+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:41 INFO SparkContext: Submitted application: gcp_playground
+[2023-01-31T12:30:41.379+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:41 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2023-01-31T12:30:41.428+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:41 INFO ResourceProfile: Limiting resource is cpu
+[2023-01-31T12:30:41.433+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:41 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2023-01-31T12:30:41.830+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:41 INFO SecurityManager: Changing view acls to: ***
+[2023-01-31T12:30:41.852+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:41 INFO SecurityManager: Changing modify acls to: ***
+[2023-01-31T12:30:41.855+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:41 INFO SecurityManager: Changing view acls groups to:
+[2023-01-31T12:30:41.929+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:41 INFO SecurityManager: Changing modify acls groups to:
+[2023-01-31T12:30:41.945+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:41 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(***); groups with view permissions: Set(); users  with modify permissions: Set(***); groups with modify permissions: Set()
+[2023-01-31T12:30:45.223+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:45 INFO Utils: Successfully started service 'sparkDriver' on port 40491.
+[2023-01-31T12:30:45.740+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:45 INFO SparkEnv: Registering MapOutputTracker
+[2023-01-31T12:30:46.198+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:46 INFO SparkEnv: Registering BlockManagerMaster
+[2023-01-31T12:30:46.567+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:46 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2023-01-31T12:30:46.572+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:46 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2023-01-31T12:30:46.716+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:46 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2023-01-31T12:30:47.326+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:47 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-1339e1d5-b63e-4673-be98-7cd2f0998d27
+[2023-01-31T12:30:47.520+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:47 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2023-01-31T12:30:47.679+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:47 INFO SparkEnv: Registering OutputCommitCoordinator
+[2023-01-31T12:30:51.364+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:51 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2023-01-31T12:30:51.402+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:51 WARN Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+[2023-01-31T12:30:51.434+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:51 WARN Utils: Service 'SparkUI' could not bind on port 4042. Attempting port 4043.
+[2023-01-31T12:30:51.437+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:51 WARN Utils: Service 'SparkUI' could not bind on port 4043. Attempting port 4044.
+[2023-01-31T12:30:51.731+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:51 INFO Utils: Successfully started service 'SparkUI' on port 4044.
+[2023-01-31T12:30:52.199+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:52 INFO SparkContext: Added JAR /opt/spark/jars/gcs-connector-hadoop3-latest.jar at spark://213f57d06c83:40491/jars/gcs-connector-hadoop3-latest.jar with timestamp 1675168237730
+[2023-01-31T12:30:52.201+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:52 INFO SparkContext: Added JAR /opt/spark/jars/spark-bigquery-with-dependencies_2.13-0.27.1.jar at spark://213f57d06c83:40491/jars/spark-bigquery-with-dependencies_2.13-0.27.1.jar with timestamp 1675168237730
+[2023-01-31T12:30:53.150+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:53 INFO Executor: Starting executor ID driver on host 213f57d06c83
+[2023-01-31T12:30:53.210+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:53 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2023-01-31T12:30:53.322+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:53 INFO Executor: Fetching spark://213f57d06c83:40491/jars/spark-bigquery-with-dependencies_2.13-0.27.1.jar with timestamp 1675168237730
+[2023-01-31T12:30:53.786+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:53 INFO TransportClientFactory: Successfully created connection to 213f57d06c83/172.21.0.8:40491 after 346 ms (0 ms spent in bootstraps)
+[2023-01-31T12:30:53.918+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:53 INFO Utils: Fetching spark://213f57d06c83:40491/jars/spark-bigquery-with-dependencies_2.13-0.27.1.jar to /tmp/spark-5cb3d4f9-d138-49fc-9c25-7164ba191aab/userFiles-b972c2b5-8d99-43b9-87bf-5ff2af8a198c/fetchFileTemp5862825590957974138.tmp
+[2023-01-31T12:30:56.834+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:56 INFO Executor: Adding file:/tmp/spark-5cb3d4f9-d138-49fc-9c25-7164ba191aab/userFiles-b972c2b5-8d99-43b9-87bf-5ff2af8a198c/spark-bigquery-with-dependencies_2.13-0.27.1.jar to class loader
+[2023-01-31T12:30:56.850+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:56 INFO Executor: Fetching spark://213f57d06c83:40491/jars/gcs-connector-hadoop3-latest.jar with timestamp 1675168237730
+[2023-01-31T12:30:56.853+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:56 INFO Utils: Fetching spark://213f57d06c83:40491/jars/gcs-connector-hadoop3-latest.jar to /tmp/spark-5cb3d4f9-d138-49fc-9c25-7164ba191aab/userFiles-b972c2b5-8d99-43b9-87bf-5ff2af8a198c/fetchFileTemp8309438478796677177.tmp
+[2023-01-31T12:30:58.657+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:58 INFO Executor: Adding file:/tmp/spark-5cb3d4f9-d138-49fc-9c25-7164ba191aab/userFiles-b972c2b5-8d99-43b9-87bf-5ff2af8a198c/gcs-connector-hadoop3-latest.jar to class loader
+[2023-01-31T12:30:58.730+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:58 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42589.
+[2023-01-31T12:30:58.731+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:58 INFO NettyBlockTransferService: Server created on 213f57d06c83:42589
+[2023-01-31T12:30:58.734+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:58 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2023-01-31T12:30:58.759+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:58 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 213f57d06c83, 42589, None)
+[2023-01-31T12:30:58.774+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:58 INFO BlockManagerMasterEndpoint: Registering block manager 213f57d06c83:42589 with 434.4 MiB RAM, BlockManagerId(driver, 213f57d06c83, 42589, None)
+[2023-01-31T12:30:58.867+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:58 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 213f57d06c83, 42589, None)
+[2023-01-31T12:30:58.869+0000] {spark_submit.py:495} INFO - 23/01/31 12:30:58 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 213f57d06c83, 42589, None)
+[2023-01-31T12:31:06.977+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:06 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2023-01-31T12:31:07.187+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:07 INFO SharedState: Warehouse path is 'file:/opt/***/spark-warehouse'.
+[2023-01-31T12:31:30.102+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:30 INFO InMemoryFileIndex: It took 542 ms to list leaf files for 1 paths.
+[2023-01-31T12:31:32.414+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:32 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 201.9 KiB, free 434.2 MiB)
+[2023-01-31T12:31:33.277+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:33 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.6 KiB, free 434.2 MiB)
+[2023-01-31T12:31:33.287+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:33 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 213f57d06c83:42589 (size: 34.6 KiB, free: 434.4 MiB)
+[2023-01-31T12:31:33.320+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:33 INFO SparkContext: Created broadcast 0 from load at NativeMethodAccessorImpl.java:0
+[2023-01-31T12:31:40.415+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:40 INFO FileInputFormat: Total input files to process : 1
+[2023-01-31T12:31:40.498+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:40 INFO FileInputFormat: Total input files to process : 1
+[2023-01-31T12:31:40.618+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:40 INFO SparkContext: Starting job: load at NativeMethodAccessorImpl.java:0
+[2023-01-31T12:31:40.766+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:40 INFO DAGScheduler: Got job 0 (load at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2023-01-31T12:31:40.768+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:40 INFO DAGScheduler: Final stage: ResultStage 0 (load at NativeMethodAccessorImpl.java:0)
+[2023-01-31T12:31:40.777+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:40 INFO DAGScheduler: Parents of final stage: List()
+[2023-01-31T12:31:40.797+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:40 INFO DAGScheduler: Missing parents: List()
+[2023-01-31T12:31:40.890+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:40 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[2] at load at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2023-01-31T12:31:41.465+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:41 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 8.6 KiB, free 434.2 MiB)
+[2023-01-31T12:31:41.488+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:41 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.6 KiB, free 434.2 MiB)
+[2023-01-31T12:31:41.492+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:41 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 213f57d06c83:42589 (size: 4.6 KiB, free: 434.4 MiB)
+[2023-01-31T12:31:41.494+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:41 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1513
+[2023-01-31T12:31:41.602+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:41 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at load at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2023-01-31T12:31:41.611+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:41 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+[2023-01-31T12:31:42.148+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:42 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (213f57d06c83, executor driver, partition 0, PROCESS_LOCAL, 7578 bytes) taskResourceAssignments Map()
+[2023-01-31T12:31:42.282+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:42 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+[2023-01-31T12:31:42.848+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:42 INFO BinaryFileRDD: Input split: Paths:/total_generation__DE_TENNET__202101010400__202101010500.json:0+9364
+[2023-01-31T12:31:45.286+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:45 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 3437 bytes result sent to driver
+[2023-01-31T12:31:45.369+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:45 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 3304 ms on 213f57d06c83 (executor driver) (1/1)
+[2023-01-31T12:31:45.374+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:45 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2023-01-31T12:31:45.470+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:45 INFO DAGScheduler: ResultStage 0 (load at NativeMethodAccessorImpl.java:0) finished in 4.305 s
+[2023-01-31T12:31:45.592+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:45 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+[2023-01-31T12:31:45.594+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:45 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+[2023-01-31T12:31:45.619+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:45 INFO DAGScheduler: Job 0 finished: load at NativeMethodAccessorImpl.java:0, took 4.997307 s
+[2023-01-31T12:31:54.774+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:54 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 213f57d06c83:42589 in memory (size: 34.6 KiB, free: 434.4 MiB)
+[2023-01-31T12:31:55.079+0000] {spark_submit.py:495} INFO - 23/01/31 12:31:55 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 213f57d06c83:42589 in memory (size: 4.6 KiB, free: 434.4 MiB)

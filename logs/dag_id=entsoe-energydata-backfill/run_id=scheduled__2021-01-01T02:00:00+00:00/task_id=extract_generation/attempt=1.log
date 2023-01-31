@@ -148,3 +148,203 @@ AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T02:00:00+00:00
 [2023-01-31T08:32:25.023+0000] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=entsoe-energydata-backfill, task_id=extract_generation, execution_date=20210101T020000, start_date=20230131T083222, end_date=20230131T083225
 [2023-01-31T08:32:25.116+0000] {local_task_job.py:159} INFO - Task exited with return code 0
 [2023-01-31T08:32:25.190+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-31T09:27:20.641+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T09:27:20.671+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T09:27:20.672+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T09:27:20.672+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 4
+[2023-01-31T09:27:20.672+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T09:27:20.707+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_generation> on 2021-01-01 02:00:00+00:00
+[2023-01-31T09:27:20.740+0000] {standard_task_runner.py:55} INFO - Started process 3514 to run task
+[2023-01-31T09:27:20.773+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'entsoe-energydata-backfill', 'extract_generation', 'scheduled__2021-01-01T02:00:00+00:00', '--job-id', '947', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmpmpkvq1au']
+[2023-01-31T09:27:20.783+0000] {standard_task_runner.py:83} INFO - Job 947: Subtask extract_generation
+[2023-01-31T09:27:20.977+0000] {task_command.py:389} INFO - Running <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [running]> on host 4475e39484c1
+[2023-01-31T09:27:21.179+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=entsoe-energydata-backfill
+AIRFLOW_CTX_TASK_ID=extract_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T02:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T02:00:00+00:00
+[2023-01-31T09:27:25.985+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-01-31T09:27:25.986+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-01-31T09:27:26.334+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-31T09:27:26.364+0000] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=entsoe-energydata-backfill, task_id=extract_generation, execution_date=20210101T020000, start_date=20230131T092720, end_date=20230131T092726
+[2023-01-31T09:27:26.467+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-31T09:27:26.520+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-31T11:07:54.335+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T11:07:54.394+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T11:07:54.395+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T11:07:54.395+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 4
+[2023-01-31T11:07:54.395+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T11:07:54.436+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_generation> on 2021-01-01 02:00:00+00:00
+[2023-01-31T11:07:54.459+0000] {standard_task_runner.py:55} INFO - Started process 9658 to run task
+[2023-01-31T11:07:54.502+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'entsoe-energydata-backfill', 'extract_generation', 'scheduled__2021-01-01T02:00:00+00:00', '--job-id', '953', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmper7gd2vo']
+[2023-01-31T11:07:54.515+0000] {standard_task_runner.py:83} INFO - Job 953: Subtask extract_generation
+[2023-01-31T11:07:54.997+0000] {task_command.py:389} INFO - Running <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [running]> on host 4475e39484c1
+[2023-01-31T11:07:55.304+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=entsoe-energydata-backfill
+AIRFLOW_CTX_TASK_ID=extract_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T02:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T02:00:00+00:00
+[2023-01-31T11:07:57.064+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-01-31T11:07:57.065+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-01-31T11:07:57.819+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-31T11:07:57.875+0000] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=entsoe-energydata-backfill, task_id=extract_generation, execution_date=20210101T020000, start_date=20230131T110754, end_date=20230131T110757
+[2023-01-31T11:07:57.955+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-31T11:07:58.007+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-31T11:56:08.686+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T11:56:08.726+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T11:56:08.726+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T11:56:08.727+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 4
+[2023-01-31T11:56:08.727+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T11:56:08.808+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_generation> on 2021-01-01 02:00:00+00:00
+[2023-01-31T11:56:08.866+0000] {standard_task_runner.py:55} INFO - Started process 12446 to run task
+[2023-01-31T11:56:08.932+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'entsoe-energydata-backfill', 'extract_generation', 'scheduled__2021-01-01T02:00:00+00:00', '--job-id', '963', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmp32o9241n']
+[2023-01-31T11:56:08.957+0000] {standard_task_runner.py:83} INFO - Job 963: Subtask extract_generation
+[2023-01-31T11:56:09.350+0000] {task_command.py:389} INFO - Running <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [running]> on host 4475e39484c1
+[2023-01-31T11:56:09.542+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=entsoe-energydata-backfill
+AIRFLOW_CTX_TASK_ID=extract_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T02:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T02:00:00+00:00
+[2023-01-31T11:56:11.704+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-01-31T11:56:11.705+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-01-31T11:56:12.343+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-31T11:56:12.379+0000] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=entsoe-energydata-backfill, task_id=extract_generation, execution_date=20210101T020000, start_date=20230131T115608, end_date=20230131T115612
+[2023-01-31T11:56:12.481+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-31T11:56:12.576+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-31T12:01:29.940+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T12:01:30.010+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T12:01:30.013+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T12:01:30.014+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 4
+[2023-01-31T12:01:30.015+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T12:01:30.105+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_generation> on 2021-01-01 02:00:00+00:00
+[2023-01-31T12:01:30.144+0000] {standard_task_runner.py:55} INFO - Started process 118 to run task
+[2023-01-31T12:01:30.182+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'entsoe-energydata-backfill', 'extract_generation', 'scheduled__2021-01-01T02:00:00+00:00', '--job-id', '969', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmpq4666l4g']
+[2023-01-31T12:01:30.197+0000] {standard_task_runner.py:83} INFO - Job 969: Subtask extract_generation
+[2023-01-31T12:01:30.488+0000] {task_command.py:389} INFO - Running <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [running]> on host 8124f810dec3
+[2023-01-31T12:01:30.987+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=entsoe-energydata-backfill
+AIRFLOW_CTX_TASK_ID=extract_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T02:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T02:00:00+00:00
+[2023-01-31T12:01:33.096+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-01-31T12:01:33.097+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-01-31T12:01:33.500+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-31T12:01:33.551+0000] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=entsoe-energydata-backfill, task_id=extract_generation, execution_date=20210101T020000, start_date=20230131T120129, end_date=20230131T120133
+[2023-01-31T12:01:33.640+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-31T12:01:33.717+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-31T12:08:40.713+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T12:08:40.762+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T12:08:40.763+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T12:08:40.763+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 4
+[2023-01-31T12:08:40.764+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T12:08:40.799+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_generation> on 2021-01-01 02:00:00+00:00
+[2023-01-31T12:08:40.817+0000] {standard_task_runner.py:55} INFO - Started process 572 to run task
+[2023-01-31T12:08:40.833+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'entsoe-energydata-backfill', 'extract_generation', 'scheduled__2021-01-01T02:00:00+00:00', '--job-id', '990', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmprp27z2mq']
+[2023-01-31T12:08:40.851+0000] {standard_task_runner.py:83} INFO - Job 990: Subtask extract_generation
+[2023-01-31T12:08:41.142+0000] {task_command.py:389} INFO - Running <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [running]> on host 8124f810dec3
+[2023-01-31T12:08:41.441+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=entsoe-energydata-backfill
+AIRFLOW_CTX_TASK_ID=extract_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T02:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T02:00:00+00:00
+[2023-01-31T12:08:43.512+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-01-31T12:08:43.512+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-01-31T12:08:44.025+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-31T12:08:44.063+0000] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=entsoe-energydata-backfill, task_id=extract_generation, execution_date=20210101T020000, start_date=20230131T120840, end_date=20230131T120844
+[2023-01-31T12:08:44.335+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-31T12:08:44.494+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-31T13:03:34.820+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T13:03:34.851+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T13:03:34.852+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T13:03:34.852+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 4
+[2023-01-31T13:03:34.853+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T13:03:34.907+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_generation> on 2021-01-01 02:00:00+00:00
+[2023-01-31T13:03:34.961+0000] {standard_task_runner.py:55} INFO - Started process 178 to run task
+[2023-01-31T13:03:34.981+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'entsoe-energydata-backfill', 'extract_generation', 'scheduled__2021-01-01T02:00:00+00:00', '--job-id', '1021', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmpq3u4_nfx']
+[2023-01-31T13:03:34.997+0000] {standard_task_runner.py:83} INFO - Job 1021: Subtask extract_generation
+[2023-01-31T13:03:35.191+0000] {task_command.py:389} INFO - Running <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [running]> on host b37fe3cbf330
+[2023-01-31T13:03:35.300+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=entsoe-energydata-backfill
+AIRFLOW_CTX_TASK_ID=extract_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T02:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T02:00:00+00:00
+[2023-01-31T13:03:36.627+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-01-31T13:03:36.628+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-01-31T13:03:37.096+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-31T13:03:37.115+0000] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=entsoe-energydata-backfill, task_id=extract_generation, execution_date=20210101T020000, start_date=20230131T130334, end_date=20230131T130337
+[2023-01-31T13:03:37.188+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-31T13:03:37.229+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-31T14:09:35.043+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T14:09:35.075+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T14:09:35.076+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T14:09:35.077+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 4
+[2023-01-31T14:09:35.077+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T14:09:35.105+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_generation> on 2021-01-01 02:00:00+00:00
+[2023-01-31T14:09:35.113+0000] {standard_task_runner.py:55} INFO - Started process 6087 to run task
+[2023-01-31T14:09:35.117+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'entsoe-energydata-backfill', 'extract_generation', 'scheduled__2021-01-01T02:00:00+00:00', '--job-id', '1037', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmp5an4i6lg']
+[2023-01-31T14:09:35.120+0000] {standard_task_runner.py:83} INFO - Job 1037: Subtask extract_generation
+[2023-01-31T14:09:35.209+0000] {task_command.py:389} INFO - Running <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [running]> on host b37fe3cbf330
+[2023-01-31T14:09:35.323+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=entsoe-energydata-backfill
+AIRFLOW_CTX_TASK_ID=extract_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T02:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T02:00:00+00:00
+[2023-01-31T14:09:37.429+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-01-31T14:09:37.430+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-01-31T14:09:38.183+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-31T14:09:38.289+0000] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=entsoe-energydata-backfill, task_id=extract_generation, execution_date=20210101T020000, start_date=20230131T140935, end_date=20230131T140938
+[2023-01-31T14:09:38.392+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-31T14:09:38.483+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-31T14:10:36.237+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T14:10:36.293+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [queued]>
+[2023-01-31T14:10:36.294+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T14:10:36.295+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 4
+[2023-01-31T14:10:36.297+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T14:10:36.665+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_generation> on 2021-01-01 02:00:00+00:00
+[2023-01-31T14:10:36.732+0000] {standard_task_runner.py:55} INFO - Started process 6173 to run task
+[2023-01-31T14:10:36.767+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'entsoe-energydata-backfill', 'extract_generation', 'scheduled__2021-01-01T02:00:00+00:00', '--job-id', '1046', '--raw', '--subdir', 'DAGS_FOLDER/ingestion_energydata_dag.py', '--cfg-path', '/tmp/tmpm9afnba6']
+[2023-01-31T14:10:36.798+0000] {standard_task_runner.py:83} INFO - Job 1046: Subtask extract_generation
+[2023-01-31T14:10:37.290+0000] {task_command.py:389} INFO - Running <TaskInstance: entsoe-energydata-backfill.extract_generation scheduled__2021-01-01T02:00:00+00:00 [running]> on host b37fe3cbf330
+[2023-01-31T14:10:38.288+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=rafzul
+AIRFLOW_CTX_DAG_ID=entsoe-energydata-backfill
+AIRFLOW_CTX_TASK_ID=extract_generation
+AIRFLOW_CTX_EXECUTION_DATE=2021-01-01T02:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-01-01T02:00:00+00:00
+[2023-01-31T14:10:41.001+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-01-31T14:10:41.022+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-01-31T14:10:41.772+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-31T14:10:41.907+0000] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=entsoe-energydata-backfill, task_id=extract_generation, execution_date=20210101T020000, start_date=20230131T141036, end_date=20230131T141041
+[2023-01-31T14:10:42.620+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-31T14:10:42.782+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

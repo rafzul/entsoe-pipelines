@@ -1,6 +1,7 @@
 import datetime as dtime
 import pandas as pd
 import os
+import pendulum
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.dummy_operator import DummyOperator
@@ -13,8 +14,8 @@ from scripts import extract_raw
 
 default_args = {
     "owner": "rafzul",
-    "start_date": dtime.datetime(2021, 1, 1, 0, 00),
-    "end_date": dtime.datetime(2021, 1, 1, 6, 00),
+    "start_date": pendulum.datetime(2021, 1, 1, 0, 00),
+    "end_date": pendulum.datetime(2021, 1, 1, 6, 00),
     "depends on past": True,
     "retries": 3,
     "retry_delay": dtime.timedelta(minutes=5),
@@ -26,6 +27,9 @@ interval_start = "{{ data_interval_start.format('YYYYMMDDHHmm') }}"
 interval_end = "{{ data_interval_end.format('YYYYMMDDHHmm') }}"
 tz = "Europe/Berlin"
 country_code = "DE_TENNET"
+
+start_date = default_args["start_date"].format("YYYYMMDDHHmm")
+end_date = default_args["end_date"].format("YYYYMMDDHHmm")
 
 dag = DAG(
     "entsoe-energydata-backfill",
@@ -59,8 +63,8 @@ stage_total_generation = SparkSubmitOperator(
         interval_start,
         interval_end,
         country_code,
-        "{{ start_date }}",
-        "{{ end_date }}",
+        start_date,
+        end_date,
     ],
 )
 

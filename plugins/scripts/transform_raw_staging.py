@@ -11,7 +11,8 @@ from pyspark.sql import SparkSession
 # custom-made modules
 from plugins.helpers.parsers import parse_datetimeindex, parse_generation_timeseries
 
-import datetime as dtime
+# import datetime as dtime
+import pendulum
 
 # TAROH DI DAG
 start = pd.Timestamp("202101010000", tz="Europe/Berlin")
@@ -177,8 +178,8 @@ class EntsoeRawTS:
         interval_start: str,
         interval_end: str,
         country_code: str,
-        period_start: dtime.datetime,
-        period_end: dtime.datetime,
+        period_start: pendulum.DateTime,
+        period_end: pendulum.DateTime,
         **params,
     ):
         # get full df of timeseries & non timeseries
@@ -215,9 +216,15 @@ class EntsoeRawTS:
             )
             all_df = all_df.join(ts_data, ["position"], how="inner")
         all_df = all_df.orderBy(F.asc("measured_at")).drop("position")
+
+        # define the data period
+        period_start = period_start.format("YYYY-MM-DD HH:mm:ss")
+        print("period startnya:", period_start)
+        period_end = period_end.format("YYYY-MM-DD HH:mm:ss")
+        print("period endnya:", period_end)
         # truncating to given period
         all_df = all_df.where(
-            f"measured_at >= '{period_start}' AND measured_at < '{period_end}'"
+            f"measured_at >= to_timestamp('{period_start}') AND measured_at < to_timestamp('{period_end}')"
         )
 
         # stage data to bigquery
@@ -230,8 +237,8 @@ def main(
     interval_start: str,
     interval_end: str,
     country_code: str,
-    period_start: dtime.datetime,
-    period_end: dtime.datetime,
+    period_start: pendulum.DateTime,
+    period_end: pendulum.DateTime,
     **params,
 ):
     print("mulai periode:", period_start)
