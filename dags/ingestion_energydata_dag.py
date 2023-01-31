@@ -28,14 +28,15 @@ interval_end = "{{ data_interval_end.format('YYYYMMDDHHmm') }}"
 tz = "Europe/Berlin"
 country_code = "DE_TENNET"
 
-start_date = default_args["start_date"].format("YYYYMMDDHHmm")
-end_date = default_args["end_date"].format("YYYYMMDDHHmm")
+start_date = default_args["start_date"].format("YYYY-MM-DD HH:mm:ss")
+end_date = default_args["end_date"].format("YYYY-MM-DD HH:mm:ss")
 
 dag = DAG(
     "entsoe-energydata-backfill",
     default_args=default_args,
     description="Builds a DAG to ingest energy data from ENTSOE API into data warehouse",
     schedule_interval="0 * * * *",
+    catchup=True,
 )
 
 start_operator = DummyOperator(task_id="starting_dag_execution", dag=dag)

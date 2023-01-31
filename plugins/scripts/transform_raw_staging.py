@@ -178,8 +178,8 @@ class EntsoeRawTS:
         interval_start: str,
         interval_end: str,
         country_code: str,
-        period_start: pendulum.DateTime,
-        period_end: pendulum.DateTime,
+        period_start: str,
+        period_end: str,
         **params,
     ):
         # get full df of timeseries & non timeseries
@@ -216,12 +216,6 @@ class EntsoeRawTS:
             )
             all_df = all_df.join(ts_data, ["position"], how="inner")
         all_df = all_df.orderBy(F.asc("measured_at")).drop("position")
-
-        # define the data period
-        period_start = period_start.format("YYYY-MM-DD HH:mm:ss")
-        print("period startnya:", period_start)
-        period_end = period_end.format("YYYY-MM-DD HH:mm:ss")
-        print("period endnya:", period_end)
         # truncating to given period
         all_df = all_df.where(
             f"measured_at >= to_timestamp('{period_start}') AND measured_at < to_timestamp('{period_end}')"
@@ -237,8 +231,8 @@ def main(
     interval_start: str,
     interval_end: str,
     country_code: str,
-    period_start: pendulum.DateTime,
-    period_end: pendulum.DateTime,
+    period_start: str,
+    period_end: str,
     **params,
 ):
     print("mulai periode:", period_start)
