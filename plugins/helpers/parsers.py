@@ -37,12 +37,8 @@ def _parse_resolution_to_timedelta(resolution_column: str) -> str:
 # parsing datetime
 def parse_datetimeindex(spark, df_ts, df_nonts, tz=None):
     # interpret the date as in local timezone where process dijalanin (WIB Jakarta, GMT +7), and render it as UTC timestamp
-    start = df_nonts.select(
-        F.to_utc_timestamp(F.col("time_Period_timeInterval_start"), "+07:00")
-    ).collect()[0][0]
-    end = df_nonts.select(
-        F.to_utc_timestamp(F.col("time_Period_timeInterval_end"), "+07:00")
-    ).collect()[0][0]
+    start = df_nonts.select(F.col("time_Period_timeInterval_start")).collect()[0][0]
+    end = df_nonts.select(F.col("time_Period_timeInterval_end")).collect()[0][0]
     # if tz is not None:
     #     start = df_nonts.select(
     #         F.to_utc_timestamp(F.col("time_Period_timeInterval_start"), tz)
@@ -58,9 +54,7 @@ def parse_datetimeindex(spark, df_ts, df_nonts, tz=None):
     delta = _parse_resolution_to_timedelta(resolution_col)
 
     # ambil nilai created_at
-    createdDateTime = df_nonts.select(
-        F.to_utc_timestamp(F.col("createdDateTime"), "+07:00")
-    ).collect()[0][0]
+    createdDateTime = df_nonts.select(F.col("createdDateTime")).collect()[0][0]
 
     # generate date index
     # date_index = spark.createDataFrame([{'date':1}]).select(F.explode(F.sequence(F.lit(start),F.lit(end),F.expr(delta))).alias("measured_at"))

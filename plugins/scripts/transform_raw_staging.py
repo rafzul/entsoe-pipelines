@@ -11,6 +11,8 @@ from pyspark.sql import SparkSession
 # custom-made modules
 from plugins.helpers.parsers import parse_datetimeindex, parse_generation_timeseries
 
+import datetime as dtime
+
 # TAROH DI DAG
 start = pd.Timestamp("202101010000", tz="Europe/Berlin")
 end = pd.Timestamp("202101010600", tz="Europe/Berlin")
@@ -175,8 +177,8 @@ class EntsoeRawTS:
         interval_start: str,
         interval_end: str,
         country_code: str,
-        period_start: datetime,
-        period_end: datetime,
+        period_start: dtime.datetime,
+        period_end: dtime.datetime,
         **params,
     ):
         # get full df of timeseries & non timeseries
@@ -212,10 +214,10 @@ class EntsoeRawTS:
                 include_eic=include_eic,
             )
             all_df = all_df.join(ts_data, ["position"], how="inner")
-        all_df = all_df.orderBy(F.asc("position")).drop("position")
+        all_df = all_df.orderBy(F.asc("measured_at")).drop("position")
         # truncating to given period
         all_df = all_df.where(
-            f"measured_at >= to_timestamp('{period_start}') AND measured_at < to_timestamp('{period_end}')"
+            f"measured_at >= '{period_start}' AND measured_at < '{period_end}'"
         )
 
         # stage data to bigquery
@@ -228,10 +230,12 @@ def main(
     interval_start: str,
     interval_end: str,
     country_code: str,
-    period_start: datetime,
-    period_end: datetime,
+    period_start: dtime.datetime,
+    period_end: dtime.datetime,
     **params,
 ):
+    print("mulai periode:", period_start)
+    print("selesai periode:", period_end)
     # create EntsoeRawTS object
     entsoe = EntsoeRawTS()
     # get the method from the method_map dict
@@ -263,8 +267,8 @@ if __name__ == "__main__":
     period_end = sys.argv[6]
     main(
         metrics_label=metrics_label,
-        interval_start=start,
-        interval_end=end,
+        interval_start=interval_start,
+        interval_end=interval_end,
         country_code=country_code,
         period_start=period_start,
         period_end=period_end,
