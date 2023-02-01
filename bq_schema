@@ -1,0 +1,97 @@
+[
+  {
+    "mode": "REQUIRED",
+    "name": "measured_at",
+    "type": "TIMESTAMP"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "created_at",
+    "type": "TIMESTAMP"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Biomass___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Fossil_Brown_coal_Lignite___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Fossil_Gas___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Fossil_Hard_coal___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Fossil_Oil___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Geothermal___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Hydro_Pumped_Storage___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Hydro_Pumped_Storage___Actual_Consumption",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Hydro_Run_of_river_and_poundage___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Hydro_Water_Reservoir___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Nuclear___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Other___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Other_renewable___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Solar___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Waste___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Wind_Offshore___Actual_Aggregated",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Wind_Onshore___Actual_Aggregated",
+    "type": "FLOAT"
+  }
+]

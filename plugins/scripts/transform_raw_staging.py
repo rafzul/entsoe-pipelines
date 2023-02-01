@@ -162,9 +162,7 @@ class EntsoeRawTS:
         BQ_DATASET = os.environ.get("BQ_DATASET")
         df_spark.write.format("bigquery").option("project", GCP_PROJECT_ID).option(
             "temporaryGcsBucket", GCP_GCS_TEMP_BUCKET
-        ).mode("append").save(
-            f"{GCP_PROJECT_ID}.{BQ_DATASET}.TEST_{metrics_label}_staging"
-        )
+        ).mode("append").save(f"{GCP_PROJECT_ID}.{BQ_DATASET}.{metrics_label}_staging")
 
     ##
     ## BASE TIMESERIES UTILITIES END
