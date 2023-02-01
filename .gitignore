@@ -6,4 +6,4 @@ entsoe-venv/
 */*.env
 spark/resources/gcs-connector-hadoop3-latest.jar
 spark/resources/spark-bigquery-with-dependencies_2.13-0.27.1.jar
-
+playground/ipynb/*
