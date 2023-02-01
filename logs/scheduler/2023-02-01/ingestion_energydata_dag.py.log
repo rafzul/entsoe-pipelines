@@ -1482,3 +1482,17 @@
 [2023-02-01T02:24:44.264+0000] {logging_mixin.py:137} INFO - [2023-02-01T02:24:44.264+0000] {dag.py:2676} INFO - Sync 1 DAGs
 [2023-02-01T02:24:44.291+0000] {logging_mixin.py:137} INFO - [2023-02-01T02:24:44.291+0000] {dag.py:3423} INFO - Setting next_dagrun for entsoe-energydata-backfill to None, run_after=None
 [2023-02-01T02:24:44.308+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.087 seconds
+[2023-02-01T02:25:14.445+0000] {processor.py:153} INFO - Started process (PID=6512) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-02-01T02:25:14.446+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-02-01T02:25:14.447+0000] {logging_mixin.py:137} INFO - [2023-02-01T02:25:14.446+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-02-01T02:25:14.475+0000] {processor.py:753} INFO - DAG(s) dict_keys(['entsoe-energydata-backfill']) retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-02-01T02:25:14.504+0000] {logging_mixin.py:137} INFO - [2023-02-01T02:25:14.504+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-02-01T02:25:14.536+0000] {logging_mixin.py:137} INFO - [2023-02-01T02:25:14.536+0000] {dag.py:3423} INFO - Setting next_dagrun for entsoe-energydata-backfill to None, run_after=None
+[2023-02-01T02:25:14.567+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.128 seconds
+[2023-02-01T02:25:44.682+0000] {processor.py:153} INFO - Started process (PID=6541) to work on /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-02-01T02:25:44.693+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingestion_energydata_dag.py for tasks to queue
+[2023-02-01T02:25:44.695+0000] {logging_mixin.py:137} INFO - [2023-02-01T02:25:44.695+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-02-01T02:25:44.735+0000] {processor.py:753} INFO - DAG(s) dict_keys(['entsoe-energydata-backfill']) retrieved from /opt/airflow/dags/ingestion_energydata_dag.py
+[2023-02-01T02:25:44.758+0000] {logging_mixin.py:137} INFO - [2023-02-01T02:25:44.758+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-02-01T02:25:44.779+0000] {logging_mixin.py:137} INFO - [2023-02-01T02:25:44.779+0000] {dag.py:3423} INFO - Setting next_dagrun for entsoe-energydata-backfill to None, run_after=None
+[2023-02-01T02:25:44.794+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingestion_energydata_dag.py took 0.124 seconds
