@@ -1,0 +1,2 @@
+class SparkDFReadError(Exception):
+    pass

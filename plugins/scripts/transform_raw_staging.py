@@ -10,6 +10,7 @@ from pyspark.sql import SparkSession
 
 # custom-made modules
 from plugins.helpers.parsers import parse_datetimeindex, parse_generation_timeseries
+from plugins.helpers.exceptions import SparkDFReadError
 
 # import datetime as dtime
 import pendulum
@@ -56,6 +57,7 @@ class EntsoeRawTS:
         # spark method map
         self.method_map = {
             "total_generation": "transform_generation",
+            "total_load": "transform_load",
         }
 
     def _base_timeseries(
@@ -82,7 +84,9 @@ class EntsoeRawTS:
                 .load(path)
             )
         except Exception as e:
-            raise e
+            raise SparkDFReadError(
+                f"Error reading dataframe from {path} with error: {e}"
+            )
 
         # deciding if it's timeseries, clean columns & cast types,
         if metrics_label in ["total_generation"]:
@@ -222,6 +226,18 @@ class EntsoeRawTS:
         # stage data to bigquery
         self._stage_to_bq(all_df, metrics_label)
         print("MANTEP!!!!")
+        
+    def transform_load(
+        self,
+        metrics_label: str,
+        interval_start: str,
+        interval_end: str,
+        country_code: str,
+        period_start: str,
+        period_end: str,
+        **params,
+    ):
+        
 
 
 def main(
