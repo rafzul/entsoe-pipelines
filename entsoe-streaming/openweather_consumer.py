@@ -8,14 +8,14 @@ import datetime as dt_module
 
 
 class OpenWeatherConsumer:
-    def __init__(self, topic, auto_offset, auto_commit, group_id):
+    def __init__(self, topic, server, auto_offset_reset, enable_auto_commit, group_id):
         self.consumer = KafkaConsumer(
             topic,
-            bootstrap_servers=['localhost:9092'],
-            auto_offset_earlier=auto_offset,
-            enable_auto_commit=auto_commit,
+            bootstrap_servers=server,
+            auto_offset_reset=auto_offset_reset,
+            enable_auto_commit=enable_auto_commit,
             group_id=group_id,
-            value_deserializer=lambda x: json.loads(x.decode("utf-8"))
+            value_deserializer=lambda x: json.loads(x.decode("utf-8")),
         )
 
     def consume_weather(self):
@@ -27,6 +27,11 @@ class OpenWeatherConsumer:
 
 
 if __name__ == "__main__":
-    ow = OpenWeatherConsumer(topic="openweather", auto_offset="earliest",
-                             auto_commit=True, group_id="consumer.group.id.demo.1")
+    ow = OpenWeatherConsumer(
+        topic="openweather",
+        server=["localhost:9092"],
+        auto_offset_reset="earliest",
+        enable_auto_commit=True,
+        group_id="consumer.group.id.demo.1",
+    )
     ow.consume_weather()

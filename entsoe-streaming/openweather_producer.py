@@ -36,19 +36,20 @@ class OpenWeatherProducer:
         op_session = requests.Session()
         while True:
             try:
-                # get weather data
+                # get weather data api response as dict
                 response = op_session.get(
                     f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={self.op_key}"
-                )
+                ).json()
                 # add current timestamp
-                response_json = response.json().update(
+                response.update(
                     {
                         "measured_time": dt_module.datetime.now().isoformat(),
                         "created_time": dt_module.datetime.now().isoformat(),
                     }
                 )
                 # send to kafka
-                self.producer.send(topic, value=response_json)
+                self.producer.send(topic, value=response)
+                print("ngirim")
             except requests.exceptions.RequestException as e:
                 if self._session_was_closed(e):
                     op_session.close()
@@ -59,5 +60,5 @@ class OpenWeatherProducer:
 
 
 if __name__ == "__main__":
-    ow = OpenWeatherProducer()
+    ow = OpenWeatherProducer(server=["localhost:9092"])
     ow.produce_weather(topic="openweather", lat="-44.34", lon="10.99")
