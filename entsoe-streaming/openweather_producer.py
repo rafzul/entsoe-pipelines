@@ -12,9 +12,8 @@ import requests
 class OpenWeatherProducer:
     def __init__(self, server):
         # load env variables needed
-        load_dotenv(".env")
+        load_dotenv("kafka.env")
         self.op_key = os.environ["OPENWEATHERAPI_KEY"]
-
         # create producer
         self.producer = KafkaProducer(
             bootstrap_servers=server,

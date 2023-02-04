@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func main() {
+func httptest() {
 	resp, err := http.Get("https://gobyexample.com")
 	if err != nil {
 		panic(err)

@@ -11,6 +11,6 @@ var (
 	basepath   = filepath.Dir(b)
 )
 
-func main() {
+func checkroot() {
 	fmt.Println(basepath)
 }
