@@ -1,3 +1,4 @@
+#BATCHING docker requirements, which is those that getting installed in the docker image (not all is used in jupyter notebook)
 python-dotenv
 entsoe-py==0.5.9
 pyspark==3.3.1

@@ -1,0 +1,12 @@
+#sparkstreaming requirements
+pyspark==3.3.1
+kafka-python
+confluent_kafka
+requests
+avro
+faust
+fastavro
+python-dotenv
+ipykernel
+pytest
+
