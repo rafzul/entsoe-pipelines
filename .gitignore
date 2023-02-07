@@ -12,3 +12,5 @@ playground/ipynb/
 */**/*venv
 /entsoe-streaming/list
 .tox
+*vscode
+

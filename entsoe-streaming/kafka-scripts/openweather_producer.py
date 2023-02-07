@@ -2,7 +2,7 @@ import time
 import json
 from kafka import KafkaProducer
 import os
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 import datetime as dt_module
 import requests
 
@@ -12,7 +12,7 @@ import requests
 class OpenWeatherProducer:
     def __init__(self, server):
         # load env variables needed
-        load_dotenv("kafka.env")
+        load_dotenv(find_dotenv("~/projects/entsoe-pipelines/local.env"))
         self.op_key = os.environ["OPENWEATHERAPI_KEY"]
         # create producer
         self.producer = KafkaProducer(
