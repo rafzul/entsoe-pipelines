@@ -237,6 +237,7 @@ class EntsoeRawTS:
     #     period_end: str,
     #     **params,
     # ):
+    #     #get full df of timeseries and non timeseries
 
 
 def main(

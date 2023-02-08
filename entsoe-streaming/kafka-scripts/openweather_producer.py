@@ -12,7 +12,7 @@ import requests
 class OpenWeatherProducer:
     def __init__(self, server):
         # load env variables needed
-        load_dotenv(find_dotenv("~/projects/entsoe-pipelines/local.env"))
+        load_dotenv(find_dotenv("local.env"))
         self.op_key = os.environ["OPENWEATHERAPI_KEY"]
         # create producer
         self.producer = KafkaProducer(

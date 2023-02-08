@@ -9,7 +9,7 @@ from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOpe
 
 
 # from plugins.scripts.extract_raw import extract_raw_data
-from scripts import extract_raw
+from scripts.extract_raw import ExtractRawData
 
 
 default_args = {
@@ -44,7 +44,7 @@ start_operator = DummyOperator(task_id="starting_dag_execution", dag=dag)
 extract_generation = PythonOperator(
     task_id="extract_generation",
     dag=dag,
-    python_callable=extract_raw.extract_raw_data,
+    python_callable=ExtractRawData().extract_raw_data,
     op_kwargs={
         "metrics_label": "total_generation",
         "start": interval_start,
