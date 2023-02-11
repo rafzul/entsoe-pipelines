@@ -9,7 +9,7 @@ from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOpe
 
 
 # from plugins.scripts.extract_raw import extract_raw_data
-from scripts.extract_raw import ExtractRawData
+from scripts.extract_raw import extract_raw_data
 
 
 default_args = {
@@ -31,6 +31,7 @@ country_code = "DE_TENNET"
 start_date = default_args["start_date"].format("YYYY-MM-DD HH:mm:ss")
 end_date = default_args["end_date"].format("YYYY-MM-DD HH:mm:ss")
 
+
 dag = DAG(
     "entsoe-energydata-backfill",
     default_args=default_args,
@@ -44,9 +45,22 @@ start_operator = DummyOperator(task_id="starting_dag_execution", dag=dag)
 extract_generation = PythonOperator(
     task_id="extract_generation",
     dag=dag,
-    python_callable=ExtractRawData().extract_raw_data,
+    python_callable=extract_raw_data,
     op_kwargs={
         "metrics_label": "total_generation",
+        "start": interval_start,
+        "end": interval_end,
+        "timezone": tz,
+        "country_code": country_code,
+    },
+)
+
+extract_load = PythonOperator(
+    task_id="extract_load",
+    dag=dag,
+    python_callable=extract_raw_data,
+    op_kwargs={
+        "metrics_label": "total_load",
         "start": interval_start,
         "end": interval_end,
         "timezone": tz,
@@ -70,4 +84,4 @@ stage_total_generation = SparkSubmitOperator(
 )
 
 
-start_operator >> extract_generation >> stage_total_generation
+start_operator >> [extract_generation, extract_load] >> stage_total_generation
