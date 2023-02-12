@@ -68,6 +68,19 @@ extract_load = PythonOperator(
     },
 )
 
+extract_day_ahead_prices = PythonOperator(
+    task_id="extract_day_ahead_prices",
+    dag=dag,
+    python_callable=extract_raw_data,
+    op_kwargs={
+        "metrics_label": "day_ahead_prices",
+        "start": interval_start,
+        "end": interval_end,
+        "timezone": tz,
+        "country_code": country_code,
+    },
+)
+
 stage_total_generation = SparkSubmitOperator(
     task_id="stage_total_generation",
     dag=dag,
