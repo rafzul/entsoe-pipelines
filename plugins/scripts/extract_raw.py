@@ -96,6 +96,20 @@ def _extract_load(entsoe_client, start, end, country_code):
     return entsoe_json
 
 
+def _extract_day_ahead_prices(entsoe_client, start, end, country_code):
+    actual_start = start + pd.Timedelta(hours=1)
+    actual_end = end + pd.Timedelta(hours=1)
+
+    # create a client
+    entsoe_data = entsoe_client.query_day_ahead_prices(
+        country_code, start=actual_start, end=actual_end
+    )
+
+    entsoe_dict = xmltodict.parse(entsoe_data)
+    entsoe_json = json.dumps(entsoe_dict)
+    return entsoe_json
+
+
 def extract_raw_data(metrics_label, start, end, timezone, country_code, **params):
     # setting up entsoe client
     entsoe_client = EntsoeRawClient(api_key=security_token)
@@ -120,6 +134,8 @@ def extract_raw_data(metrics_label, start, end, timezone, country_code, **params
         entsoe_json_data = _extract_generation(entsoe_client, start, end, country_code)
     elif metrics_label == "total_load":
         entsoe_json_data = _extract_load(entsoe_client, start, end, country_code)
+    elif metrics_label == "day_ahead_prices":
+        entsoe_json_data = _extract_day_ahead_prices(entsoe_client, start)
     else:
         pass
 
