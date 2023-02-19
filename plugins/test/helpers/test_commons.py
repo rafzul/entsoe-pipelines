@@ -1,11 +1,11 @@
 # commons_test.py
 
-from plugins.test.helpers import test_commons
+from plugins.helpers import commons
 
 
 # tes slack notifications
 def test_message_pass():
-    assert test_commons.send_slack_notifications("test message") == True
+    assert commons.send_slack_notifications("test message").status_code == 200
 
 
 # test fungsi A

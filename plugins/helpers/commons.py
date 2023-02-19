@@ -2,9 +2,10 @@ import requests
 import json
 import traceback
 from dotenv import load_dotenv, find_dotenv
+import os
 
 
-load_dotenv(find_dotenv("local.env", verbose=True))
+load_dotenv(find_dotenv("local.env"))
 SLACK_WEBHOOK_TOKEN = os.environ["SLACK_WEBHOOK_TOKEN"]
 
 webhook_url = f"https://hooks.slack.com/services/{SLACK_WEBHOOK_TOKEN}"
@@ -17,9 +18,12 @@ def send_slack_notifications(message: str):
         response = requests.post(
             webhook_url,
             headers={"Content-Type": "application/json"},
-            retries=3,
             data=json.dumps(slack_message),
         )
     except Exception:
         traceback.print_exc()
-    return True
+    return response
+
+
+if __name__ == "__main__":
+    send_slack_notifications("test message")
