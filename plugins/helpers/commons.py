@@ -3,25 +3,30 @@ import json
 import traceback
 from dotenv import load_dotenv, find_dotenv
 import os
+from plugins.helpers.exceptions import AlertsSlackError
 
 
 load_dotenv(find_dotenv("local.env"))
 SLACK_WEBHOOK_TOKEN = os.environ["SLACK_WEBHOOK_TOKEN"]
 
-webhook_url = f"https://hooks.slack.com/services/{SLACK_WEBHOOK_TOKEN}"
-
 
 # REUSABLE: send message through slack notifications
-def send_slack_notifications(message: str):
+def send_slack_notifications(message):
+    webhook_url = f"https://hooks.slack.com/services/{SLACK_WEBHOOK_TOKEN}"
+    slack_message = {"text": message}
+
+    response = requests.post(
+        webhook_url,
+        data=json.dumps(slack_message),
+        headers={"Content-Type": "application/json"},
+    )
     try:
-        slack_message = {"message": message}
-        response = requests.post(
-            webhook_url,
-            headers={"Content-Type": "application/json"},
-            data=json.dumps(slack_message),
+        response.raise_for_status()
+    except requests.HTTPError as e:
+        raise AlertsSlackError(
+            "Request to slack returned an error %s, the response is:\n%s"
+            % (response.status_code, response.text)
         )
-    except Exception:
-        traceback.print_exc()
     return response
 
 

@@ -18,5 +18,7 @@ google-cloud-core
 google-cloud-storage
 pytz
 xmltodict
+pytest
+pytest-mock
 
 
