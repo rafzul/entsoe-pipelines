@@ -25,7 +25,3 @@ def send_slack_notifications(message):
     except requests.exceptions.RequestException as e:
         raise AlertSlackError(f"Request to slack returned an HTTP error: {str(e)}")
     return response
-
-
-if __name__ == "__main__":
-    send_slack_notifications("test message")

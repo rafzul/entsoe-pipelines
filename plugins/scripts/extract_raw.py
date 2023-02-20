@@ -12,6 +12,9 @@ from airflow.providers.google.cloud.hooks.gcs import GCSHook
 # import EntsoeRawClient
 from entsoe import EntsoeRawClient
 
+# custom-made modules
+from plugins.helpers.commons import send_slack_notifications
+
 
 # class ExtractRaw:
 #     def __init__(self, **params):
@@ -144,4 +147,10 @@ def extract_raw_data(metrics_label, start, end, timezone, country_code, **params
     landing_filename = (
         f"{metrics_label}__{country_code}__{start_label}__{end_label}.json"
     )
-    _upload_blob_to_gcs(gcs_bucket, entsoe_json_data, landing_filename)
+    try:
+        _upload_blob_to_gcs(gcs_bucket, entsoe_json_data, landing_filename)
+        send_slack_notifications(f"Successfully uploaded {landing_filename} to GCS")
+    except Exception as e:
+        send_slack_notifications(
+            f"Failed to upload {landing_filename} to GCS. Error: {e}"
+        )

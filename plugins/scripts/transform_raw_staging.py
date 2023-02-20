@@ -11,6 +11,7 @@ from pyspark.sql import SparkSession
 # custom-made modules
 from plugins.helpers.parsers import parse_datetimeindex, parse_generation_timeseries
 from plugins.helpers.exceptions import SparkDFReadError
+from plugins.helpers.commons import send_slack_notifications
 
 # import datetime as dtime
 # import pendulum
@@ -83,13 +84,18 @@ class EntsoeRawTS:
                 .option("timestampFormat", "yyyy-MM-dd'T'HH:mm'Z'")
                 .load(path)
             )
-        except Exception as e:
-            raise SparkDFReadError(
-                f"Error reading dataframe from {path} with error: {e}"
+            send_slack_notifications(
+                f"Successfully loading to dataframe from file {landing_filename}"
             )
-
+        except Exception as e:
+            send_slack_notifications(
+                f"Error reading dataframe from file {landing_filename} with error: {e}"
+            )
+            raise SparkDFReadError(
+                f"Error reading dataframe from {landing_filename} with error: {e}"
+            )
         # deciding if it's timeseries, clean columns & cast types,
-        if metrics_label in ["total_generation"]:
+        if metrics_label in ["total_generation", "total_load"]:
             document_column = "GL_MarketDocument"
         df_spark = self._clean_columns_n_casttypes(df_spark, document_column)
 
@@ -224,8 +230,15 @@ class EntsoeRawTS:
         )
 
         # stage data to bigquery
-        self._stage_to_bq(all_df, metrics_label)
-        print("MANTEP!!!!")
+        try:
+            self._stage_to_bq(all_df, metrics_label)
+            send_slack_notifications(
+                f"Success staging to BQ for {metrics_label}__{country_code}__{start_label}__{end_label}"
+            )
+        except Exception as e:
+            send_slack_notifications(
+                f"Error in staging {metrics_label}__{country_code}__{start_label}__{end_label} to BQ with error: {e}"
+            )
 
     # def transform_load(
     #     self,
