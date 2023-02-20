@@ -14,21 +14,16 @@ SLACK_WEBHOOK_TOKEN = os.environ["SLACK_WEBHOOK_TOKEN"]
 def send_slack_notifications(message):
     webhook_url = f"https://hooks.slack.com/services/{SLACK_WEBHOOK_TOKEN}"
     slack_message = {"text": message}
+    session = requests.Session()
     try:
-        response = requests.post(
+        response = session.post(
             webhook_url,
             data=json.dumps(slack_message),
             headers={"Content-Type": "application/json"},
         )
-        print(response.status_code)
         response.raise_for_status()
-        print(response.status_code)
-    except requests.HTTPError as e:
-        print(f"Response status code: {response.status_code}")
-        raise AlertSlackError(
-            "Request to slack returned an error %s, the response is:\n%s"
-            % (response.status_code, response.text)
-        )
+    except requests.exceptions.RequestException as e:
+        raise AlertSlackError(f"Request to slack returned an HTTP error: {str(e)}")
     return response
 
 
