@@ -1,4 +1,4 @@
-class AlertsSlackError(Exception):
+class AlertSlackError(Exception):
     pass
 
 
